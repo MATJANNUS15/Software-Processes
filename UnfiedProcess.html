@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Rational Unified Process</title>
+  </head>
+  <body>
+    <header>
+      <h1>The Rational Unified Process</h1>
+
+      <p>
+        The Rational Unified Process (RUP) (Krutchen, 2003) is an example of a
+        modern process model that has been derived from work on the UML and the
+        associated Unified Software Development Process (Rumbaugh, et al., 1999;
+        Arlow and Neustadt, 2005). The author have included a description here,
+        as it is a good example of a hybrid process model. It brings together
+        elements from all of the generic process models (Section 2.1),
+        illustrates good practice in specification and design (Section 2.2) and
+        supports prototyping and incremental delivery (Section 2.3).
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <article>
+          <p>
+            The RUP recognizes that conventional process models present a single
+            view of the process. In contrast, the RUP is normally described from
+            three perspectives:
+          </p>
+          <ol>
+            <li>
+              A dynamic perspective, which shows the phases of the model over
+              time.
+            </li>
+            <li>
+              A static perspective, which describes the artifacts produced
+              during the process.
+            </li>
+            <li>
+              A practice perspective, which suggests good practices to be used
+              during the process.
+            </li>
+          </ol>
+        </article>
+
+        <article>
+          <p>
+            Most descriptions of the RUP attempt to combine the static and
+            dynamic perspectives in a single diagram (Krutchen, 2003). The
+            author thinks that makes the process harder to understand, so the
+            author uses separate descriptions of each of these perspectives
+          </p>
+          <p></p>
+
+          <p>
+            The RUP is a phased model that identifies four discrete phases in
+            the software process. However, unlike the waterfall model where
+            phases are equated with process activities, the phases in the RUP
+            are more closely related to business rather than technical concerns.
+            Figure 2.11 shows the phases in the RUP. These are:
+          </p>
+          <ol>
+            <li>
+              <i>Inception</i> The goal of the inception phase is to establish a
+              business case for the system. You should identify all external
+              entities (people and systems) that will
+              <img src="/iteration.png" alt="phase-iteration.png" /> interact
+              with the system and define these interactions. You then use this
+              information to assess the contribution that the system makes to
+              the business. If this contribution is minor, then the project may
+              be cancelled after this phase.
+            </li>
+
+            <li>
+              <i>Elaboration</i> The goals of the elaboration phase are to
+              develop an understanding of the problem domain, establish an
+              architectural framework for the system, develop the project plan,
+              and identify key project risks. On completion of this phase you
+              should have a requirements model for the system, which may be a
+              set of UML use-cases, an architectural description, and a
+              development plan for the software.
+            </li>
+            <li>
+              <i>Construction</i> The construction phase involves system design,
+              programming, and testing. Parts of the system are developed in
+              parallel and integrated during this phase. On completion of this
+              phase, you should have a working software system and associated
+              documentation that is ready for delivery to users.
+            </li>
+            <li>
+              <i>Transition</i> The final phase of the RUP is concerned with
+              moving the system from the development community to the user
+              community and making it work in a real environment. This is
+              something that is ignored in most software process models but is,
+              in fact, an expensive and sometimes problematic activity. On
+              completion of this phase, you should have a documented software
+              system that is working correctly in its operational environment.
+            </li>
+          </ol>
+
+          <p>
+            Iteration within the RUP is supported in two ways. Each phase may be
+            enacted in an iterative way with the results developed
+            incrementally. In addition, the whole set of phases may also be
+            enacted incrementally, as shown by the looping arrow from Transition
+            to Inception in Figure 2.12.
+          </p>
+
+          <p>
+            The static view of the RUP focuses on the activities that take place
+            during the development process. These are called workflows in the
+            RUP description. There are six core process workflows identified in
+            the process and three core supporting workflows. The RUP has been
+            designed in conjunction with the UML, so the workflow description is
+            oriented around associated UML models such as sequence models,
+            object models, etc. The core engineering and support workflows are
+            described in Figure 2.13.
+          </p>
+          <p>
+            The advantage in presenting dynamic and static views is that phases
+            of the development process are not associated with specific
+            workflows. In principle at least, all of the RUP workflows may be
+            active at all stages of the process. In the early phases of the
+            process, most effort will probably be spent on workflows such as
+            business modelling and requirements and, in the later phases, in
+            testing and deployment.
+          </p>
+
+          <article>
+            <img src="/table.png" alt="table.png" />
+
+            <p>
+              <strong>Figure 2.13</strong> Static workflows in the Rational
+              Unified Process
+            </p>
+          </article>
+
+          <article>
+            <p>
+              The practice perspective on the RUP describes good software
+              engineering practices that are recommended for use in systems
+              development. Six fundamental best practices are recommended:
+            </p>
+
+            <ol>
+              <li>
+                Develop software iteratively Plan increments of the system based
+                on customer priorities and develop the highest-priority system
+                features early in the development process.
+              </li>
+              <li>
+                Manage requirements Explicitly document the customer’s
+                requirements and keep track of changes to these requirements.
+                Analyze the impact of changes on the system before accepting
+                them.
+              </li>
+              <li>
+                Use component-based architectures Structure the system
+                architecture into components, as discussed earlier in this
+                chapter.
+              </li>
+              <li>
+                Visually model software Use graphical UML models to present
+                static and dynamic views of the software.
+              </li>
+              <li>
+                Verify software quality Ensure that the software meets the
+                organizational quality standards.
+              </li>
+              <li>
+                Control changes to software Manage changes to the software using
+                a change management system and configuration management
+                procedures and tools.
+              </li>
+            </ol>
+
+            <p>
+              The RUP is not a suitable process for all types of development,
+              e.g., embedded software development. However, it does represent an
+              approach that potentially combines the three generic process
+              models discussed in Section 2.1. The most important innovations in
+              the RUP are the separation of phases and workflows, and the
+              recognition that deploying software in a user’s environment is
+              part of the process. Phases are dynamic and have goals. Workflows
+              are static and are technical activities that are not associated
+              with a single phase but may be used throughout the development to
+              achieve the goals of each phase.
+            </p>
+          </article>
+
+          <div>
+            <h2>KEY POINTS</h2>
+
+            <div>
+              <ul>
+                <li>
+                  Software processes are the activities involved in producing a
+                  software system. Software process models are abstract
+                  representations of these processes.
+                </li>
+                <li>
+                  General process models describe the organization of software
+                  processes. Examples of these general models include the
+                  waterfall model, incremental development, and reuse-oriented
+                  development.
+                </li>
+                <li>
+                  Requirements engineering is the process of developing a
+                  software specification. Specifications are intended to
+                  communicate the system needs of the customer to the system
+                  developers.
+                </li>
+                <li>
+                  Design and implementation processes are concerned with
+                  transforming a requirements specification into an executable
+                  software system. Systematic design methods may be used as part
+                  of this transformation.
+                </li>
+                <li>
+                  Software validation is the process of checking that the system
+                  conforms to its specification and that it meets the real needs
+                  of the users of the system.
+                </li>
+                <li>
+                  Software evolution takes place when you change existing
+                  software systems to meet new requirements. Changes are
+                  continuous and the software must evolve to remain useful.
+                </li>
+                <li>
+                  Processes should include activities to cope with change. This
+                  may involve a prototyping phase that helps avoid poor
+                  decisions on requirements and design. Processes may be
+                  structured for iterative development and delivery so that
+                  changes may be made without disrupting the system as a whole.
+                </li>
+                <li>
+                  The Rational Unified Process is a modern generic process model
+                  that is organized into phases (inception, elaboration,
+                  construction, and transition) but separates activities
+                  (requirements, analysis, and design, etc.) from these phases.
+                </li>
+              </ul>
+            </div>
+
+            <h2>FURTHER READINGS</h2>
+
+            <div>
+              <p>
+                Managing Software Quality and Business Risk. This is primarily a
+                book about software management but it includes an excellent
+                chapter (Chapter 4) on process models. (M. Ould, John Wiley and
+                Sons Ltd, 1999.)
+              </p>
+
+              <p>
+                Process Models in Software Engineering. This is an excellent
+                overview of a wide range of software engineering process models
+                that have been proposed. (W. Scacchi, Encyclopaedia of Software
+                Engineering, ed. J.J. Marciniak, John Wiley and Sons, 2001.)
+                http://www.ics.uci.edu/~wscacchi/
+                Papers/SE-Encyc/Process-Models-SE-Encyc.pdf.
+              </p>
+              <p>
+                The Rational Unified Process—An Introduction (3rd edition). This
+                is the most readable book available on the RUP at the time of
+                this writing. Krutchen describes the process well, but I would
+                like to have seen more on the practical difficulties of using
+                the process. (P. Krutchen, Addison-Wesley, 2003.)
+              </p>
+            </div>
+
+            <h2>E X E R C I S E S</h2>
+
+            <div>
+              <ol>
+                <li>
+                  Giving reasons for your answer based on the type of system
+                  being developed, suggest the most appropriate generic software
+                  process model that might be used as a basis for managing the
+                  development of the following systems:
+
+                  <p>A system to control anti-lock braking in a car</p>
+                  <p>
+                    A virtual reality system to support software maintenance
+                  </p>
+                  <p>
+                    A university accounting system that replaces an existing
+                    system
+                  </p>
+                  <p>
+                    An interactive travel planning system that helps users plan
+                    journeys with the lowest environmental impact
+                  </p>
+                </li>
+                <li>
+                  Explain why incremental development is the most effective
+                  approach for developing business software systems. Why is this
+                  model less appropriate for real-time systems engineering?
+                </li>
+                <li>
+                  Consider the reuse-based process model shown in Figure 2.3.
+                  Explain why it is essential to have two separate requirements
+                  engineering activities in the process.
+                </li>
+                <li>
+                  Suggest why it is important to make a distinction between
+                  developing the user requirements and developing system
+                  requirements in the requirements engineering process.
+                </li>
+
+                <li>
+                  Describe the main activities in the software design process
+                  and the outputs of these activities. Using a diagram, show
+                  possible relationships between the outputs of these
+                  activities.
+                </li>
+
+                <li>
+                  Explain why change is inevitable in complex systems and give
+                  examples (apart from prototyping and incremental delivery) of
+                  software process activities that help predict changes and make
+                  the software being developed more resilient to change.
+                </li>
+                <li>
+                  Explain why systems developed as prototypes should not
+                  normally be used as production systems.
+                </li>
+                <li>
+                  Explain why Boehm’s spiral model is an adaptable model that
+                  can support both change avoidance and change tolerance
+                  activities. In practice, this model has not been widely used.
+                  Suggest why this might be the case.
+                </li>
+                <li>
+                  What are the advantages of providing static and dynamic views
+                  of the software process as in the Rational Unified Process?
+                </li>
+                <li>
+                  Historically, the introduction of technology has caused
+                  profound changes in the labor market and, temporarily at
+                  least, displaced people from jobs. Discuss whether the
+                  introduction of extensive process automation is likely to have
+                  the same consequences for software engineers. If you don’t
+                  think it will, explain why not. If you think that it will
+                  reduce job opportunities, is it ethical for the engineers
+                  affected to passively or actively resist the introduction of
+                  this technology?
+                </li>
+              </ol>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
