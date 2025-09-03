@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <section> 
+                <a href="/Hompage.html"><img src="icon.png" alt="Icon"> Software Processes</a>
+            </section>
+    
+            <SECTION>
+                <button>
+                    Chapter 2.1
+                    <a href="/Chapter2.1.html">Link</a>
+                </button>
+                <button>
+                    Chapter 2.2
+                    <a href="/Chapter2.2.html">Link</a>
+                </button>
+                <button>
+                    Chapter 2.3
+                    <a href="/Chapter2.3.html">Link</a>
+                </button>
+                
+                <button>
+                    Chapter 2.4
+                    <a href="/UnfiedProcess.html">Link</a>
+                </button>
+            </SECTION>
+        
+        <h1> <center>  Process activities
+    </center>  </h1>
+        
+        
+           
+          
+      
+
+      <article>
+         <p> 
+            Real software processes are interleaved sequences of technical, collaborative, and
+managerial activities with the overall goal of specifying, designing, implementing,
+and testing a software system. Software developers use a variety of different software
+tools in their work. Tools are particularly useful for supporting the editing of different
+types of document and for managing the immense volume of detailed information
+that is generated in a large software project.
+The four basic process activities of specification, development, validation, and evolution are organized differently in different development processes. In the waterfall
+model, they are organized in sequence, whereas in incremental development they are
+interleaved. How these activities are carried out depends on the type of software,
+people, and organizational structures involved. In extreme programming, for example,
+specifications are written on cards. Tests are executable and developed before the
+program itself. Evolution may involve substantial system restructuring or refactoring.
+    </p> <br><br>
+
+       <h2> <center>2.2.1 Software specification</h2></center>
+    
+    
+    
+   <p>The first published model of the software development process was derived from
+    more general system engineering processes (Royce, 1970). This model is illustrated
+    in Figure 2.1. Because of the cascade from one phase to another, this model is known
+    as the ‘waterfall model’ or software life cycle. The waterfall model is an example of
+    a plan-driven process—in principle, you must plan and schedule all of the process
+    activities before starting work on them.</p>
+
+    <p>Software specification or requirements engineering is the process of understanding
+        and defining what services are required from the system and identifying the constraints on the system’s operation and development. Requirements engineering is a</p>
+
+      <center>  <img src="AA 111.png" alt=""></center>
+
+      <p>particularly critical stage of the software process as errors at this stage inevitably
+        lead to later problems in the system design and implementation. <br>
+        The requirements engineering process (Figure 2.4) aims to produce an agreed
+        requirements document that specifies a system satisfying stakeholder requirements.
+        Requirements are usually presented at two levels of detail. End-users and customers
+        need a high-level statement of the requirements; system developers need a more
+        detailed system specification.</p> 
+        <p>There are four main activities in the requirements engineering process:
+        </p>
+<ol>
+<li>Feasibility study An estimate is made of whether the identified user needs may be
+    satisfied using current software and hardware technologies. The study considers
+    whether the proposed system will be cost-effective from a business point of view
+    and if it can be developed within existing budgetary constraints. A feasibility
+    study should be relatively cheap and quick. The result should inform the decision
+    of whether or not to go ahead with a more detailed analysis.
+    </li>
+    <li>Requirements elicitation and analysis This is the process of deriving the system
+        requirements through observation of existing systems, discussions with potential users and procurers, task analysis, and so on. This may involve the development of one or more system models and prototypes. These help you understand
+        the system to be specified.</li>
+        <li>Requirements specification Requirements specification is the activity of translating the information gathered during the analysis activity into a document that defines a set of requirements. Two types of requirements may be included in this
+            document. User requirements are abstract statements of the system requirements for the customer and end-user of the system; system requirements are a
+            more detailed description of the functionality to be provided.</li>
+
+
+    
+
+<center><img src="AA 222.png" alt=""></center>
+<li>
+     Requirements validation This activity checks the requirements for realism, consistency, and completeness. During this process, errors in the requirements document
+are inevitably discovered. It must then be modified to correct these problems.
+
+</li> </ol>
+<p>Of course, the activities in the requirements process are not simply carried out in a
+    strict sequence. Requirements analysis continues during definition and specification and
+    new requirements come to light throughout the process. Therefore, the activities of
+    analysis, definition, and specification are interleaved. In agile methods, such as extreme
+    programming, requirements are developed incrementally according to user priorities and
+    the elicitation of requirements comes from users who are part of the development team.
+    </p>
+
+    <h2> <center>2.2.2 Software design and implementation</h2></center>
+
+    <center><img src="AA 333.png" alt=""></center>
+    
+
+<p>The diagram suggests that the stages of the design process are sequential. In fact,
+    design process activities are interleaved. Feedback from one stage to another and
+    consequent design rework is inevitable in all design processes.
+    Most software interfaces with other software systems. These include the operating
+    system, database, middleware, and other application systems. These make up the ‘software platform’, the environment in which the software will execute. Information about
+    this platform is an essential input to the design process, as designers must decide how
+    best to integrate it with the software’s environment. The requirements specification is a
+    description of the functionality the software must provide and its performance and
+    dependability requirements. If the system is to process existing data, then the description
+    of that data may be included in the platform specification; otherwise, the data description
+    must be an input to the design process so that the system data organization to be defined.
+    The activities in the design process vary, depending on the type of system being
+    developed. For example, real-time systems require timing design but may not
+    include a database so there is no database design involved. Figure 2.5 shows four
+    activities that may be part of the design process for information systems:
+    </p>
+
+    <ol>
+        <li>Architectural design, where you identify the overall structure of the system, the
+            principal components (sometimes called sub-systems or modules), their relationships, and how they are distributed.</li>
+            <li>
+                Interface design, where you define the interfaces between system components.
+This interface specification must be unambiguous. With a precise interface, a
+component can be used without other components having to know how it is
+implemented. Once interface specifications are agreed, the components can be
+designed and developed concurrently.
+
+            </li>
+    
+
+   <center><img src="AA 444.png" alt=""> </center> 
+
+<li>
+    Component design, where you take each system component and design how it will
+operate. This may be a simple statement of the expected functionality to be
+implemented, with the specific design left to the programmer. Alternatively, it may
+be a list of changes to be made to a reusable component or a detailed design model.
+The design model may be used to automatically generate an implementation.
+
+</li>
+<li>
+    Database design, where you design the system data structures and how these are
+to be represented in a database. Again, the work here depends on whether an
+existing database is to be reused or a new database is to be created.
+</li>
+</ol>
+<p>These activities lead to a set of design outputs, which are also shown in Figure 2.5.
+    The detail and representation of these vary considerably. For critical systems, detailed
+    design documents setting out precise and accurate descriptions of the system must be
+    produced. If a model-driven approach is used, these outputs may mostly be diagrams.
+    Where agile methods of development are used, the outputs of the design process may not
+    be separate specification documents but may be represented in the code of the program.
+    Structured methods for design were developed in the 1970s and 1980s and were
+    the precursor to the UML and object-oriented design (Budgen, 2003). They rely on
+    producing graphical models of the system and, in many cases, automatically generating code from these models. Model-driven development (MDD) or model-driven
+    engineering (Schmidt, 2006), where models of the software are created at different
+    levels of abstraction, is an evolution of structured methods. In MDD, there is greater
+    emphasis on architectural models with a separation between abstract implementationindependent models and implementation-specific models. The models are developed
+    in sufficient detail so that the executable system can be generated from them. I discuss
+    this approach to development in Chapter 5.
+    The development of a program to implement the system follows naturally from the
+    system design processes. Although some classes of program, such as safety-critical
+    systems, are usually designed in detail before any implementation begins, it is more
+    common for the later stages of design and program development to be interleaved.
+    Software development tools may be used to generate a skeleton program from a
+    design. This includes code to define and implement interfaces, and, in many cases, the
+    developer need only add details of the operation of each program component.
+    Programming is a personal activity and there is no general process that is usually
+    followed. Some programmers start with components that they understand, develop
+    these, and then move on to less-understood components. Others take the opposite
+    </p>
+
+    <center><img src="AA 555.png" alt=""></center>
+
+    <p>approach, leaving familiar components till last because they know how to develop
+        them. Some developers like to define data early in the process then use this to drive
+        the program development; others leave data unspecified for as long as possible.
+        Normally, programmers carry out some testing of the code they have developed. This
+        often reveals program defects that must be removed from the program. This is called
+        debugging. Defect testing and debugging are different processes. Testing establishes the
+        existence of defects. Debugging is concerned with locating and correcting these defects.
+        When you are debugging, you have to generate hypotheses about the observable
+        behavior of the program then test these hypotheses in the hope of finding the fault that
+        caused the output anomaly. Testing the hypotheses may involve tracing the program
+        code manually. It may require new test cases to localize the problem. Interactive
+        debugging tools, which show the intermediate values of program variables and a trace
+        of the statements executed, may be used to support the debugging process.
+        </p>
+
+       
+        <h2> <center>2.2.3 Software validation</h2></center>
+<p>Software validation or, more generally, verification and validation (V&V) is
+    intended to show that a system both conforms to its specification and that it meets
+    the expectations of the system customer. Program testing, where the system is executed using simulated test data, is the principal validation technique. Validation may
+    also involve checking processes, such as inspections and reviews, at each stage of the
+    software process from user requirements definition to program development.
+    Because of the predominance of testing, the majority of validation costs are incurred
+    during and after implementation.
+    Except for small programs, systems should not be tested as a single, monolithic
+    unit. Figure 2.6 shows a three-stage testing process in which system components are
+    tested then the integrated system is tested and, finally, the system is tested with the
+    customer’s data. Ideally, component defects are discovered early in the process, and
+    interface problems are found when the system is integrated. However, as defects are
+    discovered, the program must be debugged and this may require other stages in the
+    testing process to be repeated. Errors in program components, say, may come to light
+    during system testing. The process is therefore an iterative one with information
+    being fed back from later stages to earlier parts of the process.
+    The stages in the testing process are:
+    </p>
+    <ol>
+        <li>Development testing The components making up the system are tested by the
+            people developing the system. Each component is tested independently, without
+            other system components. Components may be simple entities such as functions or object classes, or may be coherent groupings of these entities. Test automation tools, such as JUnit (Massol and Husted, 2003), that can re-run component
+            tests when new versions of the component are created, are commonly used.
+            </li> 
+            <li>System testing System components are integrated to create a complete system.
+                This process is concerned with finding errors that result from unanticipated
+                interactions between components and component interface problems. It is also
+                concerned with showing that the system meets its functional and non-functional
+                requirements, and testing the emergent system properties. For large systems,
+                this may be a multi-stage process where components are integrated to form subsystems that are individually tested before these sub-systems are themselves
+                integrated to form the final system.</li>
+                <li>Acceptance testing This is the final stage in the testing process before the system
+                    is accepted for operational use. The system is tested with data supplied by the
+                    system customer rather than with simulated test data. Acceptance testing may
+                    reveal errors and omissions in the system requirements definition, because the
+                    real data exercise the system in different ways from the test data. Acceptance
+                    testing may also reveal requirements problems where the system’s facilities do
+                    not really meet the user’s needs or the system performance is unacceptable.  </li>
+</ol>
+
+<p>Normally, component development and testing processes are interleaved.
+    Programmers make up their own test data and incrementally test the code as it is
+    developed. This is an economically sensible approach, as the programmer knows the
+    component and is therefore the best person to generate test cases.
+    If an incremental approach to development is used, each increment should be
+    tested as it is developed, with these tests based on the requirements for that increment. In extreme programming, tests are developed along with the requirements
+    before development starts. This helps the testers and developers to understand the
+    requirements and ensures that there are no delays as test cases are created.
+    When a plan-driven software process is used (e.g., for critical systems development), testing is driven by a set of test plans. An independent team of testers works
+    from these pre-formulated test plans, which have been developed from the system
+    specification and design. Figure 2.7 illustrates how test plans are the link between
+    testing and development activities. This is sometimes called the V-model of development (turn it on its side to see the V).
+    Acceptance testing is sometimes called ‘alpha testing’. Custom systems are
+    developed for a single client. The alpha testing process continues until the system
+    developer and the client agree that the delivered system is an acceptable implementation of the requirements.
+    When a system is to be marketed as a software product, a testing process called
+    ‘beta testing’ is often used. Beta testing involves delivering a system to a number of
+    potential customers who agree to use that system. They report problems to the system developers. This exposes the product to real use and detects errors that may not
+    have been anticipated by the system builders. After this feedback, the system is modified and released either for further beta testing or for general sale.</p>
+
+<center><img src="AA 666.png" alt=""></center>
+
+<h2> <center>2.2.4 Software evolution</h2></center>
+<p>The flexibility of software systems is one of the main reasons why more and more
+    software is being incorporated in large, complex systems. Once a decision has been
+    made to manufacture hardware, it is very expensive to make changes to the hardware
+    design. However, changes can be made to software at any time during or after the
+    system development. Even extensive changes are still much cheaper than corresponding changes to system hardware.
+    Historically, there has always been a split between the process of software development and the process of software evolution (software maintenance). People think
+    of software development as a creative activity in which a software system is developed from an initial concept through to a working system. However, they sometimes
+    think of software maintenance as dull and uninteresting. Although the costs of maintenance are often several times the initial development costs, maintenance processes
+    are sometimes considered to be less challenging than original software development.
+    This distinction between development and maintenance is increasingly irrelevant.
+    Hardly any software systems are completely new systems and it makes much more
+    sense to see development and maintenance as a continuum. Rather than two separate
+    processes, it is more realistic to think of software engineering as an evolutionary
+    process (Figure 2.8) where software is continually changed over its lifetime in
+    response to changing requirements and customer needs.</p>
+    
+      </article>
+
+
+    </main>
+</body>
+<footer>
+
+    <section>
+        <h2>SISTIM MEMBERS</h2>
+
+        <ul>
+            <li>Mark Angelo G. Patal</li>
+            <li>Isabella Grace M. Elola</li>
+            <li>Mat Jannus S. De Guzman</li>
+            <li>Hazel V. Laguras</li>
+        </ul>
+
+    </section>
+
+    
+    <section>
+        © 2025 SISTIM
+    </section>
+
+
+</footer>
+</html>
