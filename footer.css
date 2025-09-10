@@ -49,3 +49,25 @@ footer li {
     background-color: var(--primary-color);
     
 }
+
+.container {
+  display: flex; /* Makes the container a flex container */
+  justify-content: space-around; /* Distributes space around items */
+  align-items: flex-start; /* Aligns items to the start of the cross-axis */
+  gap: 20px; /* Adds space between the sections */
+}
+
+.left-section,
+.right-section {
+  flex: 1; /* Allows sections to grow and shrink to fill available space */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.email-link {
+    color: orange;
+    text-decoration: none;
+}
+.hatdog {
+    text-align: center;
+}
