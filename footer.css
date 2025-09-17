@@ -1,53 +1,139 @@
-:root{
-
-    --primary-color: #636e72;
-    --secondary-color: #002147;
-    --text-color: #ffffff;
-
+:root {
+  --primary-color: #4c9bf5;
+  --secondary-color: #002147;
+  --complementary-color: #ffa500;
+  --text-color: #ffffff;
+  --fifth-color: #000000;
 }
 @font-face {
-    font-family: "liberetinus";
-    src: url(./LibertinusSerifDisplay-Regular.ttf);
+  font-family: "liberetinus";
+  src: url(./LibertinusSerifDisplay-Regular.ttf); 
+}
+@font-face {
+  font-family: "notos";
+  src: url(./NotoSerifDisplay-Regular.ttf);
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: left;
+  font-family: "liberetinus";
+  margin-left: -8px;
+  margin-top: -8px;
+  margin-right: -8px;
+  border-radius: 0px 0px 50px 0px;
+}
+
+body {
+  justify-content: center;
+  align-items: right;
+}
+main {
+  width: 70%;
+  margin: 0 auto; /* centers main horizontally */
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-indent: 50px;
+  font-family: "notos";
+}
+
+.nav {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+
+  padding-left: 5px;
+  padding-right: 30px;
+  margin-top: 20px;
+  float: right;
+  text-decoration: none;
+}
+h1{
+  font-family: "notos";
+  font-size: 4rem;
+  background-color: var(--primary-color);
+  margin-top:auto;
+  margin-right: -8px;
+  margin-left: -8px;
+  padding-left: 20px;
+  border-radius: 0px 50px 0px 0px;
+  color: var(--fifth-color);
+}
+header a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 4rem;
+  padding-left: 20px;
+  align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+  color: var(--text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+/* Change the color of links on hover */
+.nav a:hover {
+  background-color: var(--complementary-color);
+  color: var(--fifth-color);
+}
+
+/* Add a color to the active/current link */
+.nav a.active {
+  
+  color: var(--text-color);
 }
 
 footer {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 1rem;
-    text-align: center;
-    font-family: "liberetinus";
-    margin-left: -8px;
-    margin-right: -8px;
-    border-radius: 50px 0px 0px 0px;
-    font-size: 1.1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  margin-top: 20px;
+  text-align: center;
+  font-family: "liberetinus";
+  margin-left: -8px;
+  margin-right: -8px;
+  border-radius: 50px 0px 0px 0px;
+  font-size: 1.1rem;
 }
 
 footer h2 {
-    text-align: left;
-    margin: 0 0 1rem;
-    padding-left: 20px;
+  text-align: left;
+  margin: 0 0 1rem;
+  padding-left: 20px;
 }
 
 footer ul {
-    list-style: none;
-    padding: 0;
-    padding-left: 20px;
+  list-style: none;
+  padding: 0;
+  padding-left: 2rem;
 }
 
 footer li {
-    text-align: left;
-    margin: 0.5rem 0;
-    padding-left: 20px 20px;
+  text-align: left;
+  margin: 0.5rem 0;
+  padding-left: 20px 20px;
 }
 
 .copyright {
-    text-align: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-bottom: -15px;
-    font-size: 0.9rem;
-    background-color: var(--primary-color);
-    
+  text-align: center;
+  margin-left: -8x;
+  margin-right: -8x;
+  margin-bottom: -15px;
+  font-size: 0.9rem;
+  background-color: var(--primary-color);
+}
+.copyright h2 {
+  text-align: center;
+  font-size: 1rem;
 }
 
 .container {
@@ -55,19 +141,46 @@ footer li {
   justify-content: space-around; /* Distributes space around items */
   align-items: flex-start; /* Aligns items to the start of the cross-axis */
   gap: 20px; /* Adds space between the sections */
+  padding-top:  20px;
 }
 
 .left-section,
 .right-section {
   flex: 1; /* Allows sections to grow and shrink to fill available space */
   padding: 20px;
-  border: 1px solid #ccc;
+  margin-top: 20px;
+  border: 1px solid var(--text-color);
 }
 
 .email-link {
-    color: orange;
-    text-decoration: none;
+  color: var(--complementary-color);
+  text-decoration: none;
 }
 .hatdog {
-    text-align: center;
+  text-align: center;
+}
+
+.img-container {
+  text-align: center;
+}
+
+ul li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+ol li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+#header-icon {
+  width: 60px;
+  height: 60px;
+  align-items: start;
+  margin-top: 5px;
+}
+
+img {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
