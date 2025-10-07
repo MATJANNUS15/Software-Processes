@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,162 +9,366 @@
 <body class="min-h-screen bg-white">
 
   <!-- Header / Navbar -->
-  <header class="bg-blue-900 text-white shadow-lg fixed w-full  ">
-    <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
-      <!-- Logo -->
-      <div class="text-2xl font-bold text-blue-100 ">
-        <a href="/index.html" class="flex items-center gap-2 hidd">
-          <img class="w-10 cursor-pointer" src="src/assets/images/icon.png" alt="Logo">
-          <span class="font-semibold text-lg">Software Processes</span>
-        </a>
+  <header class="bg-blue-800 text-white shadow-xl fixed w-full top-0 z-50 backdrop-blur-sm">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center space-x-3 min-w-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+            <span class="text-blue-800 font-bold text-sm sm:text-base">SP</span>
+          </div>
+          <div class="min-w-0">
+            <h1 class="font-bold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl truncate">
+              Software Processes
+            </h1>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <ul class="flex space-x-1">
+            <li><a href="/Software.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-blue-500 transition-all duration-200">Chapter 2.1</a></li>
+            <li><a href="/process activities.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-blue-500 transition-all duration-200">Chapter 2.2</a></li>
+            <li><a href="/Coping with change.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-blue-500 transition-all duration-200">Chapter 2.3</a></li>
+            <li><a href="/UnfiedProcess.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-blue-500 transition-all duration-200">Chapter 2.4</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-blue-200 hover:text-white hover:bg-blue-500 transition-colors duration-200">
+          <div class="w-6 h-6 relative">
+            <span class="absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out -translate-y-2"></span>
+            <span class="absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out opacity-100"></span>
+            <span class="absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out translate-y-2"></span>
+          </div>
+        </button>
       </div>
 
-      <!-- Links -->
-      <div class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-        <ul class="hidden md:flex space-x-8 text-l">
-        <li><a href="/Software.html" className="hover:text-blue-400 transition">Chapter 2.1</a></li>
-              <li><a href="/process activities.html" className="hover:text-blue-400 transition">Chapter 2.2</a></li>
-              <li><a href="/Coping with change.html" className="hover:text-blue-400 transition">Chapter 2.3</a></li>
-              <li><a href="/UnfiedProcess.html" className="hover:text-blue-400 transition">Chapter 2.4</a></li>
-        </ul>
-      </div>
-
-      <!-- Right side -->
-      <div class="flex items-center gap-6">
-        <button onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden">☰</button>
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="lg:hidden transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-blue-800/80 rounded-lg mt-2 mb-4 backdrop-blur-sm">
+          <a href="/Software.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500 transition-colors duration-200">Chapter 2.1</a>
+          <a href="/process activities.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500 transition-colors duration-200">Chapter 2.2</a>
+          <a href="/Coping with change.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500 transition-colors duration-200">Chapter 2.3</a>
+          <a href="/UnfiedProcess.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500 transition-colors duration-200">Chapter 2.4</a>
+        </div>
       </div>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <main class="">
-    <section class="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
-        <article class="container mx-auto px-6 text-center w-full">
-      <h1 class="text-5xl font-bold text-blue-900 mb-6">Software Processes</h1>
+  <main>
+    <section class="relative bg-gradient-to-br from-blue-200 via-white to-blue-200 py-16 sm:py-20 lg:py-24 overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute top-10 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+      <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse delay-75"></div>
 
-      <article class="mb-10">
-        <h2 class="text-3xl font-semibold mb-2 text-blue-700 max-w-3xl mx-auto">Objectives</h2>
-        <p class="text-xl text-blue-700 mb-8 max-w-3xl mx-auto">
-          The objective of this chapter is to introduce you to the idea of a software process—a coherent set of activities for software production.
-          When you have read this chapter you will:
-        </p>
+      <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-5xl mx-auto">
 
-        <ul class="list-disc list-inside space-y-2 text-left">
-          <li>Understand the concepts of software processes and software process models</li>
-          <li>Be introduced to three generic software process models and when they might be used</li>
-          <li>Know about the fundamental process activities of requirements engineering, development, testing, and evolution</li>
-          <li>Understand why processes should be organized to cope with changes in requirements and design</li>
-        </ul>
-      </article>
-      </article>
+          <!-- Main Title -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-blue-800 mb-6 leading-tight">
+            Software Processes
+          </h1>
+
+          <!-- Subtitle -->
+          <div class="mb-12">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-500 mb-4">
+              Objectives
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-800 leading-relaxed max-w-4xl mx-auto">
+              The objective of this chapter is to introduce you to the idea of a software process—a coherent set of activities for software production.
+            </p>
+          </div>
+
+          <!-- Objectives Grid -->
+          <div class="grid sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
+
+            <!-- Objective Card -->
+            <div class="bg-white/90 rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div class="flex items-start space-x-3 text-left">
+                <span class="text-2xl">🎯</span>
+                <p class="text-gray-800 font-medium">Understand the concepts of software processes and software process models</p>
+              </div>
+            </div>
+
+            <div class="bg-white/90 rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div class="flex items-start space-x-3 text-left">
+                <span class="text-2xl">📋</span>
+                <p class="text-gray-800 font-medium">Be introduced to three generic software process models and when they might be used</p>
+              </div>
+            </div>
+
+            <div class="bg-white/90 rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div class="flex items-start space-x-3 text-left">
+                <span class="text-2xl">⚙️</span>
+                <p class="text-gray-800 font-medium">Know about the fundamental process activities of requirements engineering, development, testing, and evolution</p>
+              </div>
+            </div>
+
+            <div class="bg-white/90 rounded-xl p-6 shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div class="flex items-start space-x-3 text-left">
+                <span class="text-2xl">🔄</span>
+                <p class="text-gray-800 font-medium">Understand why processes should be organized to cope with changes in requirements and design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section>
 
-      <article class="mb-10  ">
-        <h2 class="text-2xl font-semibold mb-2 text-center">Contents</h2>
-        <div class="flex">
-        <p><a href="/Software.html" class="text-blue-600 hover:underline"><strong>2.1</strong> Software process models</a></p>
-        <p><a href="/process activities.html" class="text-blue-600 hover:underline"><strong>2.2</strong> Process activities</a></p>
-        <p><a href="/Coping with change.html" class="text-blue-600 hover:underline"><strong>2.3</strong> Coping with change</a></p>
-        <p><a href="/UnfiedProcess.html" class="text-blue-600 hover:underline"><strong>2.4</strong> The Rational Unified Process</a></p>
+    <!-- Course Contents Section -->
+    <section class="py-16 sm:py-20 bg-gradient-to-br from-blue-200 to-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-blue-800 mb-4">Course Contents</h2>
+        <p class="text-lg text-gray-800 mb-10">Navigate through comprehensive chapters covering software engineering processes.</p>
+
+        <!-- Chapters Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="group relative bg-white border border-blue-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition hover:-translate-y-2">
+            <div class="absolute -top-4 -right-4 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg shadow-md">2.1</div>
+            <div class="text-5xl mb-4 text-blue-500">📊</div>
+            <h3 class="font-semibold text-blue-800 mb-2 text-lg">Software Process Models</h3>
+            <p class="text-gray-800 text-sm mb-4">Learn about different software process models and their applications.</p>
+            <a href="/Software.html" class="inline-flex items-center text-blue-500 hover:text-blue-800 font-medium text-sm transition">
+              Explore Chapter →
+            </a>
+          </div>
+
+          <div class="group relative bg-white border border-blue-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition hover:-translate-y-2">
+            <div class="absolute -top-4 -right-4 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg shadow-md">2.2</div>
+            <div class="text-5xl mb-4 text-blue-500">⚡</div>
+            <h3 class="font-semibold text-blue-800 mb-2 text-lg">Process Activities</h3>
+            <p class="text-gray-800 text-sm mb-4">Explore the fundamental activities in software development processes.</p>
+            <a href="/process activities.html" class="inline-flex items-center text-blue-500 hover:text-blue-800 font-medium text-sm transition">
+              Explore Chapter →
+            </a>
+          </div>
+
+          <div class="group relative bg-white border border-blue-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition hover:-translate-y-2">
+            <div class="absolute -top-4 -right-4 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg shadow-md">2.3</div>
+            <div class="text-5xl mb-4 text-blue-500">🔄</div>
+            <h3 class="font-semibold text-blue-800 mb-2 text-lg">Coping with Change</h3>
+            <p class="text-gray-800 text-sm mb-4">Understand how to adapt processes for changing requirements.</p>
+            <a href="/Coping with change.html" class="inline-flex items-center text-blue-500 hover:text-blue-800 font-medium text-sm transition">
+              Explore Chapter →
+            </a>
+          </div>
+
+          <div class="group relative bg-white border border-blue-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition hover:-translate-y-2">
+            <div class="absolute -top-4 -right-4 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg shadow-md">2.4</div>
+            <div class="text-5xl mb-4 text-blue-500">🏗️</div>
+            <h3 class="font-semibold text-blue-800 mb-2 text-lg">Rational Unified Process</h3>
+            <p class="text-gray-800 text-sm mb-4">Deep dive into the RUP methodology and its implementation.</p>
+            <a href="/UnfiedProcess.html" class="inline-flex items-center text-blue-500 hover:text-blue-800 font-medium text-sm transition">
+              Explore Chapter →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+   <section class="py-24 sm:py-28 bg-white">
+  <div class="container mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- INTRODUCTION -->
+      <article class="mb-16">
+        <div class="bg-white rounded-3xl p-10 sm:p-12 shadow-2xl border border-blue-200">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-8 flex items-center">
+            <span class="w-10 h-10 bg-blue-200 rounded-lg flex items-center justify-center mr-4 text-xl">💡</span>
+            What is a Software Process?
+          </h2>
+          <p class="text-lg text-gray-800 leading-relaxed mb-8">
+            A software process is a set of related activities that leads to the production of a software product. These activities may involve the development of software from scratch
+            in a standard programming language like Java or C. However, business applications
+            are not necessarily developed in this way. New business software is now often developed by extending and modifying existing systems or by configuring and integrating
+            off-the-shelf software or system components.
+          </p>
+          <p class="text-lg text-gray-800 leading-relaxed">
+            There are many different software processes but all must include four activities
+            that are fundamental to software engineering:
+          </p>
         </div>
       </article>
-      <article class="mb-10 space-y-4 leading-relaxed text-gray-800">
-  <p>
-    A software process is a set of related activities that leads to the production of a software product. These activities may involve the development of software from scratch
-    in a standard programming language like Java or C. However, business applications
-    are not necessarily developed in this way. New business software is now often developed by extending and modifying existing systems or by configuring and integrating
-    off-the-shelf software or system components.
-  </p>
 
-  <p>There are many different software processes but all must include four activities
-    that are fundamental to software engineering:</p>
+      <!-- FUNDAMENTAL ACTIVITIES -->
+      <article class="mb-16">
+        <div class="bg-white rounded-3xl p-10 sm:p-12 shadow-2xl border border-blue-200">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-blue-800 mb-8 flex items-center">
+            <span class="w-10 h-10 bg-blue-200 rounded-lg flex items-center justify-center mr-4 text-xl">🔧</span>
+            Fundamental Software Engineering Activities
+          </h3>
 
-  <ol class="list-decimal list-inside space-y-2 ml-4">
-    <li><strong>Software specification</strong> – The functionality of the software and constraints on its
-      operation must be defined.</li>
-    <li><strong>Software design and implementation</strong> – The software to meet the specification
-      must be produced.</li>
-    <li><strong>Software validation</strong> – The software must be validated to ensure that it does what
-      the customer wants.</li>
-    <li><strong>Software evolution</strong> – The software must evolve to meet changing customer needs.</li>
-  </ol>
-</article>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-start space-x-5 p-6 rounded-2xl bg-blue-200 border border-blue-800 hover:scale-[1.02] transition-transform duration-300">
+              <span class="text-3xl mt-1">📝</span>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">Software specification</h4>
+                <p class="text-gray-800 text-lg">The functionality of the software and constraints on its operation must be defined.</p>
+              </div>
+            </div>
 
-<article class="mb-10 space-y-4 leading-relaxed text-gray-800">
-  <p>
-    In some form, these activities are part of all software processes. In practice, of
-    course, they are complex activities in themselves and include sub-activities such as
-    requirements validation, architectural design, unit testing, etc. There are also supporting process activities such as documentation and software configuration management.
-  </p>
+            <div class="flex items-start space-x-5 p-6 rounded-2xl bg-blue-200 border border-blue-800 hover:scale-[1.02] transition-transform duration-300">
+              <span class="text-3xl mt-1">⚙️</span>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">Software design and implementation</h4>
+                <p class="text-gray-800 text-lg">The software to meet the specification must be produced.</p>
+              </div>
+            </div>
 
-  <p>
-    When we describe and discuss processes, we usually talk about the activities in
-    these processes such as specifying a data model, designing a user interface, etc., and
-    the ordering of these activities. However, as well as activities, process descriptions
-    may also include:
-  </p>
+            <div class="flex items-start space-x-5 p-6 rounded-2xl bg-blue-200 border border-blue-800 hover:scale-[1.02] transition-transform duration-300">
+              <span class="text-3xl mt-1">✅</span>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">Software validation</h4>
+                <p class="text-gray-800 text-lg">The software must be validated to ensure that it does what the customer wants.</p>
+              </div>
+            </div>
 
-  <ol class="list-decimal list-inside space-y-2 ml-4">
-    <li><strong>Products</strong> – the outcomes of a process activity. For example, the outcome of architectural design may be a model of the software architecture.</li>
-    <li><strong>Roles</strong> – responsibilities of the people involved in the process (e.g., project manager, programmer).</li>
-    <li><strong>Pre- and post-conditions</strong> – statements that are true before and after a
-        process activity has been enacted. For example, before architectural design begins,
-        all requirements must be approved; afterward, UML models may be reviewed.</li>
-  </ol>
+            <div class="flex items-start space-x-5 p-6 rounded-2xl bg-blue-200 border border-blue-800 hover:scale-[1.02] transition-transform duration-300">
+              <span class="text-3xl mt-1">🔄</span>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">Software evolution</h4>
+                <p class="text-gray-800 text-lg">The software must evolve to meet changing customer needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-  <p>
-    Software processes are complex and, like all intellectual and creative processes,
-    rely on people making decisions and judgments. There is no ideal process and most
-    organizations have developed their own software development processes. Processes
-    have evolved to take advantage of the people in an organization and the systems being developed.
-  </p>
+      <!-- PROCESS DESCRIPTIONS -->
+      <article class="mb-16">
+        <div class="bg-white rounded-3xl p-10 sm:p-12 shadow-2xl border border-blue-200">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-blue-800 mb-8 flex items-center">
+            <span class="w-10 h-10 bg-blue-200 rounded-lg flex items-center justify-center mr-4 text-xl">📋</span>
+            Process Descriptions Include
+          </h3>
 
-  <p>
-    Sometimes, software processes are categorized as either <strong>plan-driven</strong> or <strong>agile</strong>.
-    Plan-driven processes are fully planned in advance, while agile processes are incremental
-    and adapt to changing customer requirements. Each approach suits different contexts.
-  </p>
+          <p class="text-lg text-gray-800 leading-relaxed mb-8">
+            In some form, these activities are part of all software processes. In practice, of
+            course, they are complex activities in themselves and include sub-activities such as
+            requirements validation, architectural design, unit testing, etc. There are also supporting process activities such as documentation and software configuration management.
+          </p>
 
-  <p>
-    Although there is no ‘ideal’ software process, there is scope for improving processes
-    in many organizations. Some may include outdated techniques, while others don’t
-    use the best practices in industrial software engineering.
-  </p>
+          <p class="text-lg text-gray-800 leading-relaxed mb-8">
+            When we describe and discuss processes, we usually talk about the activities in
+            these processes such as specifying a data model, designing a user interface, etc., and
+            the ordering of these activities. However, as well as activities, process descriptions
+            may also include:
+          </p>
 
-  <p>
-    Software processes can be improved by <strong>process standardization</strong>, which reduces diversity across an organization, improves communication, reduces training time,
-    and makes automated support more economical. It also prepares organizations to adopt
-    new engineering practices. (Process improvement is discussed in Chapter 26.)
-  </p>
-</article>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="flex items-start space-x-5 p-6 rounded-2xl bg-blue-200 border border-blue-200 hover:scale-[1.02] transition-transform duration-300">
+              <span class="text-3xl mt-1">📦</span>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">Products</h4>
+                <p class="text-gray-800 text-lg">The outcomes of a process activity, such as a model of the software architecture.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-5 p-6 rounded-2xl bg-blue-200 border border-blue-200 hover:scale-[1.02] transition-transform duration-300">
+              <span class="text-3xl mt-1">👥</span>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">Roles</h4>
+                <p class="text-gray-800 text-lg">Responsibilities of the people involved (e.g., project manager, programmer).</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-5 p-6 rounded-2xl bg-blue-200 border border-blue-200 hover:scale-[1.02] transition-transform duration-300">
+              <span class="text-3xl mt-1">📊</span>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">Pre- and post-conditions</h4>
+                <p class="text-gray-800 text-lg">Statements that must hold true before and after an activity — e.g., requirements approved before design begins.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ADDITIONAL INSIGHTS -->
+      <article class="mb-16">
+        <div class="bg-white rounded-3xl p-10 sm:p-12 shadow-2xl border border-blue-200">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-blue-800 mb-8 flex items-center">
+            <span class="w-10 h-10 bg-blue-200 rounded-lg flex items-center justify-center mr-4 text-xl">🧠</span>
+            Key Insights
+          </h3>
+
+          <div class="space-y-8">
+            <div class="border-l-4 border-blue-500 pl-8">
+              <p class="text-lg text-gray-800 leading-relaxed">
+                Software processes are complex and rely heavily on human judgment. There is no perfect process; most organizations evolve their own based on experience.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-200 to-blue-200 rounded-2xl p-8 border border-blue-200 shadow-md">
+              <h4 class="font-bold text-2xl text-blue-800 mb-4">Process Categories</h4>
+              <p class="text-lg text-gray-800 leading-relaxed">
+                Processes are often categorized as <strong>plan-driven</strong> or <strong>agile</strong>. Plan-driven approaches are pre-planned, while agile methods adapt to evolving requirements.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-blue-500 pl-8">
+              <p class="text-lg text-gray-800 leading-relaxed">
+                Although no "ideal" process exists, many organizations can benefit from process improvement by discarding outdated practices and adopting modern techniques.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-200 to-blue-200 rounded-2xl p-8 border border-blue-500 shadow-md">
+              <h4 class="font-bold text-2xl text-blue-800 mb-4">Process Improvement</h4>
+              <p class="text-lg text-gray-800 leading-relaxed">
+                Software processes improve through <strong>standardization</strong>, which enhances communication, reduces training time, and promotes consistent quality across projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
 
 
-      <!-- Other articles preserved -->
-    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white py-6 mt-16 text-center shadow-inner">
-    <h2 class="font-semibold mb-2">SISTIM MEMBERS</h2>
-    <ul class="space-y-1">
-      <li>Mark Angelo G. Patal</li>
-      <li>Isabella Grace M. Elola</li>
-      <li>Mat Jannus S. De Guzman</li>
-      <li>Hazel V. Laguras</li>
-    </ul>
-    <p class="mt-4 text-sm text-gray-600">© 2025 SISTIM</p>
-  </footer>
+  <footer class="bg-gradient-to-br from-blue-800 to-blue-500 text-white shadow-inner">
+    <div class="container mx-auto px-4 py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Members -->
+      <div class="bg-white/10 rounded-2xl p-6">
+        <h3 class="font-bold text-xl text-white mb-4">SISTIM MEMBERS</h3>
+        <ul class="space-y-2 text-blue-200">
+          <li>Mark Angelo G. Patal</li>
+          <li>Isabella Grace M. Elola</li>
+          <li>Mat Jannus S. De Guzman</li>
+          <li>Hazel V. Laguras</li>
+        </ul>
+      </div>
 
-  <!-- Script for mobile toggle -->
-  <script>
-    const navLinks = document.querySelector('.nav-links')
-    function onToggleMenu(e) {
-      e.innerText = e.innerText === '☰' ? '✖' : '☰'
-      navLinks.classList.toggle('top-[9%]')
-    }
-  </script>
+      <!-- Quick Links -->
+      <div class="bg-white/10 rounded-2xl p-6">
+        <h3 class="font-bold text-xl text-white mb-4">Quick Navigation</h3>
+        <ul class="space-y-2 text-blue-200">
+          <li><a href="/Software.html" class="hover:text-white">Chapter 2.1</a></li>
+          <li><a href="/process activities.html" class="hover:text-white">Chapter 2.2</a></li>
+          <li><a href="/Coping with change.html" class="hover:text-white">Chapter 2.3</a></li>
+          <li><a href="/UnfiedProcess.html" class="hover:text-white">Chapter 2.4</a></li>
+        </ul>
+      </div>
+
+      <!-- Course Info -->
+      <div class="bg-white/10 rounded-2xl p-6">
+        <h3 class="font-bold text-xl text-white mb-4">Course Info</h3>
+        <p class="text-blue-200">Software Engineering</p>
+        <p class="text-blue-200">Chapter 2: Software Processes</p>
+        <p class="text-blue-200">Academic Year: 2025</p>
+      </div>
+    </div>
+
+    <div class="border-t border-blue-500 pt-6 text-center text-blue-200 text-sm">
+      © 2025 SISTIM. Built with passion for software engineering education.
+    </div>
+  </footer>
 </body>
 </html>
-y
