@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-@theme { 
-
-  
-}
 
 .primary-color {
   @apply bg-blue-900;
