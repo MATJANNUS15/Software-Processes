@@ -1,181 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="src/output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
+<body class="min-h-screen bg-white">
 
-    <header>
-        <section class="bg"> 
-            <a href="/index.html"><img src="src/assets/images/icon.png" alt="Icon"> Software Processes</a>
-        </section>
+  <!-- Header / Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg fixed w-full  ">
+    <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-blue-100 ">
+        <a href="/index.html" class="flex items-center gap-2 hidd">
+          <img class="w-10 cursor-pointer" src="src/assets/images/icon.png" alt="Logo">
+          <span class="font-semibold text-lg">Software Processes</span>
+        </a>
+      </div>
 
-        <SECTION>
-            <button>
-                
-                <a href="/Software.html">Chapter 2.1</a>
-            </button>
-            <button>
-                <a href="/process activities.html">Chapter 2.2  </a>
-            </button>
-            <button>
-                
-                <a href="/Coping with change.html">Chapter 2.3</a>
-            </button>
-            
-            <button>
-            
-                <a href="/UnfiedProcess.html">Chapter 2.4</a>
-            </button>
-        </SECTION>
+      <!-- Links -->
+      <div class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+        <ul class="hidden md:flex space-x-8 text-l">
+        <li><a href="/Software.html" className="hover:text-blue-400 transition">Chapter 2.1</a></li>
+              <li><a href="/process activities.html" className="hover:text-blue-400 transition">Chapter 2.2</a></li>
+              <li><a href="/Coping with change.html" className="hover:text-blue-400 transition">Chapter 2.3</a></li>
+              <li><a href="/UnfiedProcess.html" className="hover:text-blue-400 transition">Chapter 2.4</a></li>
+        </ul>
+      </div>
 
-    </header>
+      <!-- Right side -->
+      <div class="flex items-center gap-6">
+        <button onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden">☰</button>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h1>Software processes</h1>
+  <!-- Main Content -->
+  <main class="">
+    <section class="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+        <article class="container mx-auto px-6 text-center w-full">
+      <h1 class="text-5xl font-bold text-blue-900 mb-6">Software Processes</h1>
 
-            <article>
-                
+      <article class="mb-10">
+        <h2 class="text-3xl font-semibold mb-2 text-blue-700 max-w-3xl mx-auto">Objectives</h2>
+        <p class="text-xl text-blue-700 mb-8 max-w-3xl mx-auto">
+          The objective of this chapter is to introduce you to the idea of a software process—a coherent set of activities for software production.
+          When you have read this chapter you will:
+        </p>
 
+        <ul class="list-disc list-inside space-y-2 text-left">
+          <li>Understand the concepts of software processes and software process models</li>
+          <li>Be introduced to three generic software process models and when they might be used</li>
+          <li>Know about the fundamental process activities of requirements engineering, development, testing, and evolution</li>
+          <li>Understand why processes should be organized to cope with changes in requirements and design</li>
+        </ul>
+      </article>
+      </article>
+    </section>
+    <section>
 
-                <h3>Objectives</h3>
+      <article class="mb-10  ">
+        <h2 class="text-2xl font-semibold mb-2 text-center">Contents</h2>
+        <div class="flex">
+        <p><a href="/Software.html" class="text-blue-600 hover:underline"><strong>2.1</strong> Software process models</a></p>
+        <p><a href="/process activities.html" class="text-blue-600 hover:underline"><strong>2.2</strong> Process activities</a></p>
+        <p><a href="/Coping with change.html" class="text-blue-600 hover:underline"><strong>2.3</strong> Coping with change</a></p>
+        <p><a href="/UnfiedProcess.html" class="text-blue-600 hover:underline"><strong>2.4</strong> The Rational Unified Process</a></p>
+        </div>
+      </article>
+      <article class="mb-10 space-y-4 leading-relaxed text-gray-800">
+  <p>
+    A software process is a set of related activities that leads to the production of a software product. These activities may involve the development of software from scratch
+    in a standard programming language like Java or C. However, business applications
+    are not necessarily developed in this way. New business software is now often developed by extending and modifying existing systems or by configuring and integrating
+    off-the-shelf software or system components.
+  </p>
 
-                <p>The objective of this chapter is to introduce you to the idea of a software
-process—a coherent set of activities for software production. When you
-have read this chapter you will:</p>
+  <p>There are many different software processes but all must include four activities
+    that are fundamental to software engineering:</p>
 
-<ul>
-    <li>understand the concepts of software processes and software process
-models;</li>
-    <li>have been introduced to three generic software process models and
-when they might be used;</li>
-    <li>know about the fundamental process activities of software
-requirements engineering, software development, testing, and
-evolution;</li>
-    <li>understand why processes should be organized to cope with changes
-in the software requirements and design;understand how the Rational Unified Process integrates good software
-engineering practice to create adaptable software processes.</li>
-    
-</ul>
+  <ol class="list-decimal list-inside space-y-2 ml-4">
+    <li><strong>Software specification</strong> – The functionality of the software and constraints on its
+      operation must be defined.</li>
+    <li><strong>Software design and implementation</strong> – The software to meet the specification
+      must be produced.</li>
+    <li><strong>Software validation</strong> – The software must be validated to ensure that it does what
+      the customer wants.</li>
+    <li><strong>Software evolution</strong> – The software must evolve to meet changing customer needs.</li>
+  </ol>
+</article>
 
+<article class="mb-10 space-y-4 leading-relaxed text-gray-800">
+  <p>
+    In some form, these activities are part of all software processes. In practice, of
+    course, they are complex activities in themselves and include sub-activities such as
+    requirements validation, architectural design, unit testing, etc. There are also supporting process activities such as documentation and software configuration management.
+  </p>
 
-            </article>
+  <p>
+    When we describe and discuss processes, we usually talk about the activities in
+    these processes such as specifying a data model, designing a user interface, etc., and
+    the ordering of these activities. However, as well as activities, process descriptions
+    may also include:
+  </p>
 
-            <Article>
-                <h2>Contents</h2>
-                <p><a href="/Software.html"><strong>2.1</strong> Software process models</a></p>
-                <p><a href="/process activities.html"><strong>2.2</strong> Process activities</a></p>
-                <p><a href="/Coping with change.html"><strong>2.3</strong> Coping with change</a></p>
-                <p><a href="/UnfiedProcess.html"><strong>2.4</strong> The Rational Unified Process</a></p>
-            </Article>
+  <ol class="list-decimal list-inside space-y-2 ml-4">
+    <li><strong>Products</strong> – the outcomes of a process activity. For example, the outcome of architectural design may be a model of the software architecture.</li>
+    <li><strong>Roles</strong> – responsibilities of the people involved in the process (e.g., project manager, programmer).</li>
+    <li><strong>Pre- and post-conditions</strong> – statements that are true before and after a
+        process activity has been enacted. For example, before architectural design begins,
+        all requirements must be approved; afterward, UML models may be reviewed.</li>
+  </ol>
 
-            <ARTICLE>
-                <P>
-                    A software process is a set of related activities that leads to the production of a software product. These activities may involve the development of software from scratch
-in a standard programming language like Java or C. However, business applications
-are not necessarily developed in this way. New business software is now often developed by extending and modifying existing systems or by configuring and integrating
-off-the-shelf software or system components. </P>
+  <p>
+    Software processes are complex and, like all intellectual and creative processes,
+    rely on people making decisions and judgments. There is no ideal process and most
+    organizations have developed their own software development processes. Processes
+    have evolved to take advantage of the people in an organization and the systems being developed.
+  </p>
 
-<P>There are many different software processes but all must include four activities
-that are fundamental to software engineering:</P>
+  <p>
+    Sometimes, software processes are categorized as either <strong>plan-driven</strong> or <strong>agile</strong>.
+    Plan-driven processes are fully planned in advance, while agile processes are incremental
+    and adapt to changing customer requirements. Each approach suits different contexts.
+  </p>
 
-<OL>
-    <LI>Software specification The functionality of the software and constraints on its
-operation must be defined.
- <LI>Software design and implementation The software to meet the specification
-must be produced.</LI>
-<LI>Software validation The software must be validated to ensure that it does what
-the customer wants.</LI>
-<LI>Software evolution The software must evolve to meet changing customer needs.</LI>
-</OL>
+  <p>
+    Although there is no ‘ideal’ software process, there is scope for improving processes
+    in many organizations. Some may include outdated techniques, while others don’t
+    use the best practices in industrial software engineering.
+  </p>
 
-            </ARTICLE>
-
-            <ARTICLE>
-                <P>     In some form, these activities are part of all software processes. In practice, of
-course, they are complex activities in themselves and include sub-activities such as
-requirements validation, architectural design, unit testing, etc. There are also supporting process activities such as documentation and software configuration management.</P>
-
-<P>When we describe and discuss processes, we usually talk about the activities in
-these processes such as specifying a data model, designing a user interface, etc., and
-the ordering of these activities. However, as well as activities, process descriptions
-may also include:</P>
-
-<OL>
-    <LI>Products, which are the outcomes of a process activity. For example, the outcome of the activity of architectural design may be a model of the software
-architecture.</LI>
-    <LI>Roles, which reflect the responsibilities of the people involved in the process.
-Examples of roles are project manager, configuration manager, programmer, etc.</LI>
-    <LI> Pre- and post-conditions, which are statements that are true before and after a
-process activity has been enacted or a product produced. For example, before
-architectural design begins, a pre-condition may be that all requirements have
-been approved by the customer; after this activity is finished, a post-condition
-might be that the UML models describing the architecture have been reviewed.
-</LI>
-</OL>
-
-<P>Software processes are complex and, like all intellectual and creative processes,
-rely on people making decisions and judgments. There is no ideal process and most
-organizations have developed their own software development processes. Processes
-have evolved to take advantage of the capabilities of the people in an organization
-and the specific characteristics of the systems that are being developed. For some systems, such as critical systems, a very structured development process is required.
-For business systems, with rapidly changing requirements, a less formal, flexible
-process is likely to be more effective.</P>
-<P>
-
-    Sometimes, software processes are categorized as either plan-driven or agile
-processes. Plan-driven processes are processes where all of the process activities are
-planned in advance and progress is measured against this plan. In agile processes,
-which I discuss in Chapter 3, planning is incremental and it is easier to change the
-process to reflect changing customer requirements. As Boehm and Turner (2003)
-discuss, each approach is suitable for different types of software. Generally, you
-need to find a balance between plan-driven and agile processes.
-</P>
-<P>
-    Although there is no ‘ideal’ software process, there is scope for improving the
-software process in many organizations. Processes may include outdated techniques
-or may not take advantage of the best practice in industrial software engineering.
-Indeed, many organizations still do not take advantage of software engineering
-methods in their software development.
-</P>
-
-<P>Software processes can be improved by process standardization where the diversity in software processes across an organization is reduced. This leads to improved
-communication and a reduction in training time, and makes automated process support more economical. Standardization is also an important first step in introducing
-new software engineering methods and techniques and good software engineering
-practice. I discuss software process improvement in more detail in Chapter 26</P>
-            </ARTICLE>
-        </section>
-
-    
-
-    </main>
+  <p>
+    Software processes can be improved by <strong>process standardization</strong>, which reduces diversity across an organization, improves communication, reduces training time,
+    and makes automated support more economical. It also prepares organizations to adopt
+    new engineering practices. (Process improvement is discussed in Chapter 26.)
+  </p>
+</article>
 
 
-    <footer>
 
-        <section>
-            <h2>SISTIM MEMBERS</h2>
+      <!-- Other articles preserved -->
+    </section>
+  </main>
 
-            <ul>
-                <li>Mark Angelo G. Patal</li>
-                <li>Isabella Grace M. Elola</li>
-                <li>Mat Jannus S. De Guzman</li>
-                <li>Hazel V. Laguras</li>
-            </ul>
+  <!-- Footer -->
+  <footer class="bg-white py-6 mt-16 text-center shadow-inner">
+    <h2 class="font-semibold mb-2">SISTIM MEMBERS</h2>
+    <ul class="space-y-1">
+      <li>Mark Angelo G. Patal</li>
+      <li>Isabella Grace M. Elola</li>
+      <li>Mat Jannus S. De Guzman</li>
+      <li>Hazel V. Laguras</li>
+    </ul>
+    <p class="mt-4 text-sm text-gray-600">© 2025 SISTIM</p>
+  </footer>
 
-        </section>
-
-        
-        <section>
-            © 2025 SISTIM
-        </section>
-
-
-    </footer>
-    
+  <!-- Script for mobile toggle -->
+  <script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+      e.innerText = e.innerText === '☰' ? '✖' : '☰'
+      navLinks.classList.toggle('top-[9%]')
+    }
+  </script>
 </body>
 </html>
+y
