@@ -2,8 +2,21 @@
 
 
 .primary-color {
-  @apply bg-blue-900;
+  @apply bg-blue-800;
 }
+.secondary-color {
+  @apply bg-blue-500;
+}
+.accent-color {
+  @apply bg-blue-200;
+}
+.neutral-color {
+  @apply bg-gray-800;
+}
+.background-color {
+  @apply bg-white;
+}
+
 
 .img-container {
   @apply relative w-full h-64 bg-gray-200 overflow-hidden;
