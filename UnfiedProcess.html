@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Rational Unified Process</title>
-
-    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/output.css" />
   </head>
-  <body>
-    <header>
 
-            <a href="/index.html"><img src="/src/assets/images/icon.png" alt="Icon" id="header-icon">Software Processes</a>
+  <body class="min-h-screen bg-white text-gray-800">
+    <!-- HEADER / NAVBAR -->
+    <header
+      class="bg-blue-800 text-white shadow-xl fixed w-full top-0 z-50 backdrop-blur-sm"
+    >
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 lg:h-20">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3 min-w-0">
+            <div
+              class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md"
+            >
+              <span class="text-blue-800 font-bold text-sm sm:text-base">SP</span>
+            </div>
+            <div class="min-w-0">
+              <h1
+                class="font-bold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl truncate"
+              >
+                Software Processes
+              </h1>
+            </div>
+          </div>
 
-            
-            <div class="nav">
-                
-                <a href="/Software.html">Chapter 2.1</a>
-            
-                <a href="/process activities.html">Chapter 2.2  </a>
-                
-                <a href="/Coping with change.html">Chapter 2.3</a>
-            
-                <a href="/UnfiedProcess.html">Chapter 2.4</a>
-           
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center space-x-1">
+            <ul class="flex space-x-1">
+              <li>
+                <a
+                  href="/Software.html"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-blue-500 transition-all duration-200"
+                  >Chapter 2.1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/process activities.html"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-blue-500 transition-all duration-200"
+                  >Chapter 2.2</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/Coping with change.html"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-blue-500 transition-all duration-200"
+                  >Chapter 2.3</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/UnfiedProcess.html"
+                  class="px-3 py-2 rounded-md text-sm font-medium bg-blue-500"
+                  >Chapter 2.4</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-blue-200 hover:text-white hover:bg-blue-500 transition-colors duration-200"
+          >
+            <div class="w-6 h-6 relative">
+              <span
+                class="absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out -translate-y-2"
+              ></span>
+              <span
+                class="absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out opacity-100"
+              ></span>
+              <span
+                class="absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out translate-y-2"
+              ></span>
+            </div>
+          </button>
               </div>
        
       
@@ -45,44 +103,20 @@
         illustrates good practice in specification and design (Section 2.2) and
         supports prototyping and incremental delivery (Section 2.3).
       </p>
-          <p>
-            The RUP recognizes that conventional process models present a single
-            view of the process. In contrast, the RUP is normally described from
-            three perspectives:
-          </p>
-          <ol>
-            <li>
-              A dynamic perspective, which shows the phases of the model over
-              time.
-            </li>
-            <li>
-              A static perspective, which describes the artifacts produced
-              during the process.
-            </li>
-            <li>
-              A practice perspective, which suggests good practices to be used
-              during the process.
-            </li>
+
+          <p>The RUP is described from three perspectives:</p>
+          <ol class="list-decimal list-inside space-y-2 pl-4">
+            <li>Dynamic perspective – shows the phases over time.</li>
+            <li>Static perspective – describes artifacts produced during the process.</li>
+            <li>Practice perspective – suggests good practices to follow.</li>
           </ol>
-        </article>
-
-        <article>
-          <p>
-            Most descriptions of the RUP attempt to combine the static and
-            dynamic perspectives in a single diagram (Krutchen, 2003). The
-            author thinks that makes the process harder to understand, so the
-            author uses separate descriptions of each of these perspectives
-          </p>
-          <p></p>
 
           <p>
-            The RUP is a phased model that identifies four discrete phases in
-            the software process. However, unlike the waterfall model where
-            phases are equated with process activities, the phases in the RUP
-            are more closely related to business rather than technical concerns.
-            Figure 2.11 shows the phases in the RUP. These are:
+            The RUP identifies four phases, each corresponding to business concerns
+            rather than just technical activities:
           </p>
-          <ol>
+
+          <ol class="list-decimal list-inside space-y-4 pl-4">
             <li>
               <i>Inception</i> The goal of the inception phase is to establish a
               business case for the system. You should identify all external
