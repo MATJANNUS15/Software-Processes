@@ -6,33 +6,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
-    <header>
-        <section> 
-            <a href="/index.html"><img src="/src/assets/images/icon.png" alt="Icon"> Software Processes</a>
-        </section>
 
-        <SECTION>
-                   <button>
-                
-                <a href="/Software.html">Chapter 2.1</a>
-            </button>
-            <button>
-                <a href="/process activities.html">Chapter 2.2  </a>
-            </button>
-            <button>
-                
-                <a href="/Coping with change.html">Chapter 2.3</a>
-            </button>
-            
-            <button>
-            
-                <a href="/UnfiedProcess.html">Chapter 2.4</a>
-            </button>
-        </SECTION>
-        <main>
-        <section>
-            <h4>2.1 Software process models</h4>
+
+
+  <!-- Header / Navbar -->
+  <header class="bg-blue-900 text-white shadow-lg fixed w-full  ">
+    <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-blue-100 ">
+        <a href="/index.html" class="flex items-center gap-2 hidd">
+          <img class="w-10 cursor-pointer" src="src/assets/images/icon.png" alt="Logo">
+          <span class="font-semibold text-lg">Software Processes</span>
+        </a>
+      </div>
+
+      <!-- Links -->
+      <div class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+        <ul class="hidden md:flex space-x-8 text-l">
+        <li><a href="/Software.html" className="hover:text-blue-400 transition">Chapter 2.1</a></li>
+              <li><a href="/process activities.html" className="hover:text-blue-400 transition">Chapter 2.2</a></li>
+              <li><a href="/Coping with change.html" className="hover:text-blue-400 transition">Chapter 2.3</a></li>
+              <li><a href="/UnfiedProcess.html" className="hover:text-blue-400 transition">Chapter 2.4</a></li>
+        </ul>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-6">
+        <button onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden">☰</button>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="rounded-lg">
+    <section class="bg-gradient-to-br from-blue-50 to-blue-100 py-20 text-justify ">
+        <div class="text-3xl font-bold text-justify text-blue-900 bg-blue-500 border bg-gray-400 border-solid ">2.1 Software process models</div>
             <p>As the author explained in Chapter 1, a software process model is a simplified representation
                 of a software process. Each process model represents a process from a particular perspective, and thus provides only partial information about that process. For example,
                 a process activity model shows the activities and their sequence but may not show
@@ -43,13 +51,14 @@
                 they are abstractions of the process that can be used to explain different approaches to
                 software development. You can think of them as process frameworks that may be
                 extended and adapted to create more specific software engineering processes.</p>
-            <p>The process models that I cover here are:</p>
-
+            
+        </article>
             <ol>
+                <p>The process models that I cover here are:</p>
                 <li>The waterfall model This takes the fundamental process activities of specification, development, validation, and evolution and represents them as separate
                     process phases such as requirements specification, software design, implementation, testing, and so on.</li>
-                <p> 30 Chapter 2 Sofware processes</p>
-                    <img src="/src/assets/images/1stpic.PNG" alt="">
+                <p class="text-3xl font-bold text-justify text-blue-900 bg-blue-500"> 30 Chapter 2 Sofware processes</p>
+                    <img src="/src/assets/images/1stpic.PNG" alt="" class="mx-auto block rounded-lg shadow">
                 <li>Incremental development This approach interleaves the activities of specification, development, and validation. The system is developed as a series of versions
                     (increments), with each version adding functionality to the previous version.</li>
                 <li>Reuse-oriented software engineering This approach is based on the existence of
@@ -58,7 +67,7 @@
                     them from scratch.</li>
             </ol>
 
-            <p>2.1.1 The framewall model</p>
+            <p class="text-3xl font-bold text-justify text-blue-900 bg-blue-500">2.1.1 The framewall model</p>
             <p>These models are not mutually exclusive and are often used together, especially
                 for large systems development. For large systems, it makes sense to combine some
                 of the best features of the waterfall and the incremental development models. You
@@ -73,7 +82,7 @@
                 a plan-driven process—in principle, you must plan and schedule all of the process
                 activities before starting work on them.</p>
             
-                <p>2.1 ■ Sofreware models</p>
+            <p class="text-3xl font-bold text-justify text-blue-900">2.1 ■ Sofreware models</p>
             <ol>
                 <p>The principal stages of the waterfall model directly reflect the fundamental development activities:</p>
                 <li>Requirements analysis and definition The system’s services, constraints, and
@@ -112,7 +121,7 @@
                     The system must therefore evolve to remain useful. Making these changes (software
                     maintenance) may involve repeating previous process stages.</p>
                     
-                <p> 32 Chapter 2 ■ Software processes</p>
+                <p class="text-3xl font-bold text-justify text-blue-900 bg-blue-500 " 32 Chapter 2 ■ Software processes</p>
                     <article>
                         <p>Cleanroom software engineering</p>
                         <p>An example of a formal development process, originally developed by IBM, is the Cleanroom process. In the
@@ -120,8 +129,8 @@
                             implementation. Software correctness is demonstrated using a formal approach. There is no unit testing for
                             defects in the process and the system testing is focused on assessing the system’s reliability</p>
                         <p>The objective of the Cleanroom process is zero-defects software so that delivered systems have a high level of reliability.</p>
-                        <a href="http://ww25.softwareengineering-9.com/Web/History/">http://ww25.softwareengineering-9.com/Web/History/</a>
-                        <h3> 1.1 ■ Professional software development 5 </h3>
+                        <a href="http://ww25.softwareengineering-9.com/Web/History/"></a>
+                        <h3 class="text-3xl font-bold text-justify text-blue-900 bg-blue-500"> 1.1 ■ Professional software development 5 </h3>
                         <p>Lots of people write programs. People in business write spreadsheet programs to
                             simplify their jobs, scientists and engineers write programs to process their experimental data, and hobbyists write programs for their own interest and enjoyment.
                             However, the vast majority of software development is a professional activity where
@@ -166,9 +175,9 @@
                         regulators that the system actually meets its safety or security requirements.</p>
                     <p>Processes based on formal transformations are generally only used in the development of safety-critical or security-critical systems. They require specialized
                         expertise. For the majority of systems this process does not offer significant costbenefits over other approaches to system development.</p>
-                    <h3>6 Chapter 1 ■ Introduction</h3>
+                    <p class="text-3xl font-bold text-justify text-blue-900 bg-blue-500">6 Chapter 1 ■ Introduction</p>
 
-                    <img src="/src/assets/images/2ndpic.PNG" alt="">
+                    <img src="/src/assets/images/2ndpic.PNG" alt="" class="mx-auto block">
 
                     <p>Figure 1.1 Frequently
                         asked questions about
@@ -209,11 +218,11 @@
                             and so on. These can be generalized into the set of attributes shown in Figure 1.2,
                             which I believe are the essential characteristics of a professional software system.</p>
                         
-                        <h3>2.1.2 Incremental development</h3>
+                        <h1 class="text-3xl font-bold text-justify text-blue-900 bg-blue-500">2.1.2 Incremental development</h1>
 
                         <p>Incremental development is based on the idea of developing an initial implementation, exposing this to user comment and evolving it through several versions until an
                             adequate system has been developed (Figure 2.2). Specification, development, and</p>
-                       <img src="/src/assets/images/2nd_pic.PNG" alt="">
+                       <img src="/src/assets/images/2nd_pic.PNG" alt="" alt="" class="mx-auto block">
                        <p>validation activities are interleaved rather than separate, with rapid feedback across activities.</p>
 
                        <p>Incremental software development, which is a fundamental part of agile
@@ -242,13 +251,12 @@
                                 process</li>
                             </ol>
 
-                        <p>34 Chapter 2 ■ Software processes</p>
+                        <p class="text-3xl font-bold text-justify text-blue-900 bg-blue-500">34 Chapter 2 ■ Software processes</p>
                         
                         <article>
-                            <section>
-                                <img src="/src/assets/images/icon1.png" alt="icon">
-                                Problems with incremental development
-                            </section>
+                           
+                            <p>Problems with incremental development</p>
+                    
                             <p>Although incremental development has many advantages, it is not problem-free. The primary cause of the
                                 difficulty is the fact that large organizations have bureaucratic procedures that have evolved over time and there
                                 may be a mismatch between these procedures and a more informal iterative or agile process.</p>
@@ -285,7 +293,7 @@
                             disrupt normal business processes. I discuss the advantages and disadvantages of incremental delivery in Section 2.3.2.</p>
                             <img src="/src/assets/images/4th_pic.png" alt="">
 
-                        <h3>2.1.3 Reuse-oriented software engineering</h3>
+                        <h1 class="text-3xl font-bold text-justify text-blue-900 bg-blue-500 mx-auto block rounded-lg shadow">2.1.3 Reuse-oriented software engineering</h1>
                         <p>In the majority of software projects, there is some software reuse. This often happens
                             informally when people working on the project know of designs or code that are
                             similar to what is required. They look for these, modify them as needed, and incorporate them into their system.</p>
@@ -316,7 +324,7 @@
                                 process rather than a separate activity</p>
                         </ol>
 
-                        <h3>36 Chapter 2 ■ Software processes</h3>
+                        <h1 class="text-3xl font-bold text-justify text-blue-900 bg-blue-500">36 Chapter 2 ■ Software processes</h1>
                         <p>Reuse-oriented software engineering has the obvious advantage of reducing the
                             amount of software to be developed and so reducing cost and risks. It usually also
                             leads to faster delivery of the software. However, requirements compromises are
@@ -328,7 +336,7 @@
                             covered in Chapter 16, component-based software engineering in Chapters 17 and
                             18, and service-oriented systems in Chapter 19.</p>
 
-                        <h3>2.2 Process activities</h3>
+                        <h1 class="text-3xl font-bold text-justify text-blue-900 bg-blue-500 border-4 border-gray-900 p-6 rounded-lg">2.2 Process activities</h1>
                         <p>Real software processes are interleaved sequences of technical, collaborative, and
                             managerial activities with the overall goal of specifying, designing, implementing,
                             and testing a software system. Software developers use a variety of different software
@@ -341,30 +349,29 @@
                             people, and organizational structures involved. In extreme programming, for example,
                             specifications are written on cards. Tests are executable and developed before the
                             program itself. Evolution may involve substantial system restructuring or refactoring.</p>
-         
+                        </div>
         </section>
         </main>
 
-        <footer>
-
-            <section>
-                <h2>SISTIM MEMBERS</h2>
-    
-                <ul>
-                    <li>Mark Angelo G. Patal</li>
-                    <li>Isabella Grace M. Elola</li>
-                    <li>Mat Jannus S. De Guzman</li>
-                    <li>Hazel V. Laguras</li>
-                </ul>
-    
-            </section>
-    
-            
-            <section>
-                © 2025 SISTIM
-            </section>
-    
-    
-        </footer>
+                 <!-- Footer -->
+            <footer class="bg-blue-900 text-white py-8 mt-16 shadow-inner border-2 text-center rounded-lg  md:bg-red-500 lg:bg-yellow-500">
+            <h2 class="text-2xl font-bold mb-2">SISTIM MEMBERS</h2>
+            <ul class="space-y-1">
+              <li>Mark Angelo G. Patal</li>
+              <li>Isabella Grace M. Elola</li>
+              <li>Mat Jannus S. De Guzman</li>
+              <li>Hazel V. Laguras</li>
+            </ul>
+            <p class="mt-4 text-sm text-gray-600">© 2025 SISTIM</p>
+          </footer>
+      
+          <!-- Script for mobile toggle -->
+          <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e) {
+              e.innerText = e.innerText === '☰' ? '✖' : '☰'
+              navLinks.classList.toggle('top-[9%]')
+            }
+          </script>
 </body>
 </html>
