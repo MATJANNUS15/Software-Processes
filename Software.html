@@ -1,370 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 2.2 – Process Activities</title>
+  <link rel="stylesheet" href="src/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Image Design */
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      background: linear-gradient(to bottom right, #e0f2fe, #f8fafc);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .image-frame:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+    .image-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <section> 
-            <a href="/index.html"><img src="/src/assets/images/icon.png" alt="Icon"> Software Processes</a>
-        </section>
 
-        <SECTION>
-                   <button>
-                
-                <a href="/Software.html">Chapter 2.1</a>
-            </button>
-            <button>
-                <a href="/process activities.html">Chapter 2.2  </a>
-            </button>
-            <button>
-                
-                <a href="/Coping with change.html">Chapter 2.3</a>
-            </button>
-            
-            <button>
-            
-                <a href="/UnfiedProcess.html">Chapter 2.4</a>
-            </button>
-        </SECTION>
-        <main>
-        <section>
-            <h4>2.1 Software process models</h4>
-            <p>As the author explained in Chapter 1, a software process model is a simplified representation
-                of a software process. Each process model represents a process from a particular perspective, and thus provides only partial information about that process. For example,
-                a process activity model shows the activities and their sequence but may not show
-                the roles of the people involved in these activities. In this section, I introduce a number of very general process models (sometimes called ‘process paradigms’) and
-                present these from an architectural perspective. That is, we see the framework of the
-                process but not the details of specific activities.</p>
-            <p>These generic models are not definitive descriptions of software processes. Rather,
-                they are abstractions of the process that can be used to explain different approaches to
-                software development. You can think of them as process frameworks that may be
-                extended and adapted to create more specific software engineering processes.</p>
-            <p>The process models that I cover here are:</p>
+<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900">
 
-            <ol>
-                <li>The waterfall model This takes the fundamental process activities of specification, development, validation, and evolution and represents them as separate
-                    process phases such as requirements specification, software design, implementation, testing, and so on.</li>
-                <p> 30 Chapter 2 Sofware processes</p>
-                    <img src="/src/assets/images/1stpic.PNG" alt="">
-                <li>Incremental development This approach interleaves the activities of specification, development, and validation. The system is developed as a series of versions
-                    (increments), with each version adding functionality to the previous version.</li>
-                <li>Reuse-oriented software engineering This approach is based on the existence of
-                    a significant number of reusable components. The system development process
-                    focuses on integrating these components into a system rather than developing
-                    them from scratch.</li>
-            </ol>
+  <!-- HEADER -->
+  <div class="bg-blue-800 text-white fixed top-0 w-full z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <div class="flex items-center space-x-2 font-bold text-lg sm:text-xl">
+        <img src="src/assets/images/icon.png" alt="Icon" class="w-8 h-8">
+        <span>Software Processes</span>
+      </div>
 
-            <p>2.1.1 The framewall model</p>
-            <p>These models are not mutually exclusive and are often used together, especially
-                for large systems development. For large systems, it makes sense to combine some
-                of the best features of the waterfall and the incremental development models. You
-                need to have information about the essential system requirements to design a software architecture to support these requirements. You cannot develop this incrementally. Sub-systems within a larger system may be developed using different
-                approaches. Parts of the system that are well understood can be specified and developed using a waterfall-based process. Parts of the system which are difficult to
-                specify in advance, such as the user interface, should always be developed using an
-                incremental approach.</p>
-            <p>The first published model of the software development process was derived from
-                more general system engineering processes (Royce, 1970). This model is illustrated
-                in Figure 2.1. Because of the cascade from one phase to another, this model is known
-                as the ‘waterfall model’ or software life cycle. The waterfall model is an example of
-                a plan-driven process—in principle, you must plan and schedule all of the process
-                activities before starting work on them.</p>
-            
-                <p>2.1 ■ Sofreware models</p>
-            <ol>
-                <p>The principal stages of the waterfall model directly reflect the fundamental development activities:</p>
-                <li>Requirements analysis and definition The system’s services, constraints, and
-                    goals are established by consultation with system users. They are then defined
-                    in detail and serve as a system specification.</li>
-                <li>System and software design The systems design process allocates the requirements to either hardware or software systems by establishing an overall system
-                    architecture. Software design involves identifying and describing the fundamental software system abstractions and their relationships.</li>
-                <li>Implementation and unit testing During this stage, the software design is realized as a set of programs or program units. Unit testing involves verifying that
-                    each unit meets its specification.</li>
-                <li>Integration and system testing The individual program units or programs
-                    are integrated and tested as a complete system to ensure that the software
-                    requirements have been met. After testing, the software system is delivered to
-                    the customer.</li>
-                <li> Operation and maintenance Normally (although not necessarily), this is the
-                    longest life cycle phase. The system is installed and put into practical use.
-                    Maintenance involves correcting errors which were not discovered in earlier
-                    stages of the life cycle, improving the implementation of system units and
-                    enhancing the system’s services as new requirements are discovered.</li>
-                </ol>
-           
-                <p>In principle, the result of each phase is one or more documents that are approved
-                    (‘signed off’). The following phase should not start until the previous phase has finished. In practice, these stages overlap and feed information to each other. During
-                    design, problems with requirements are identified. During coding, design problems
-                    are found and so on. The software process is not a simple linear model but involves
-                    feedback from one phase to another. Documents produced in each phase may then
-                    have to be modified to reflect the changes made.</p>
-                <p>Because of the costs of producing and approving documents, iterations can be
-                    costly and involve significant rework. Therefore, after a small number of iterations,
-                    it is normal to freeze parts of the development, such as the specification, and to continue with the later development stages. Problems are left for later resolution,
-                    ignored, or programmed around. This premature freezing of requirements may mean
-                    that the system won’t do what the user wants. It may also lead to badly structured
-                    systems as design problems are circumvented by implementation tricks.</p>
-                <p>During the final life cycle phase (operation and maintenance) the software is put
-                    into use. Errors and omissions in the original software requirements are discovered.
-                    Program and design errors emerge and the need for new functionality is identified.
-                    The system must therefore evolve to remain useful. Making these changes (software
-                    maintenance) may involve repeating previous process stages.</p>
-                    
-                <p> 32 Chapter 2 ■ Software processes</p>
-                    <article>
-                        <p>Cleanroom software engineering</p>
-                        <p>An example of a formal development process, originally developed by IBM, is the Cleanroom process. In the
-                            Cleanroom process each software increment is formally specified and this specification is transformed into an
-                            implementation. Software correctness is demonstrated using a formal approach. There is no unit testing for
-                            defects in the process and the system testing is focused on assessing the system’s reliability</p>
-                        <p>The objective of the Cleanroom process is zero-defects software so that delivered systems have a high level of reliability.</p>
-                        <a href="http://ww25.softwareengineering-9.com/Web/History/">http://ww25.softwareengineering-9.com/Web/History/</a>
-                        <h3> 1.1 ■ Professional software development 5 </h3>
-                        <p>Lots of people write programs. People in business write spreadsheet programs to
-                            simplify their jobs, scientists and engineers write programs to process their experimental data, and hobbyists write programs for their own interest and enjoyment.
-                            However, the vast majority of software development is a professional activity where
-                            software is developed for specific business purposes, for inclusion in other devices,
-                            or as software products such as information systems, CAD systems, etc. Professional
-                            software, intended for use by someone apart from its developer, is usually developed
-                            by teams rather than individuals. It is maintained and changed throughout its life.</p>
-                        <p>Software engineering is intended to support professional software development,
-                            rather than individual programming. It includes techniques that support program
-                            specification, design, and evolution, none of which are normally relevant for personal software development. To help you to get a broad view of what software engineering is about, I have summarized some frequently asked questions in Figure 1.1.</p>
-                        <p>Many people think that software is simply another word for computer programs.
-                            However, when we are talking about software engineering, software is not just the
-                            programs themselves but also all associated documentation and configuration data
-                            that is required to make these programs operate correctly. A professionally developed software system is often more than a single program. The system usually consists of a number of separate programs and configuration files that are used to set up
-                            these programs. It may include system documentation, which describes the structure
-                            of the system; user documentation, which explains how to use the system, and websites for users to download recent product information.</p>
-                        <p>This is one of the important differences between professional and amateur software development. If you are writing a program for yourself, no one else will use it
-                            and you don’t have to worry about writing program guides, documenting the program design, etc. However, if you are writing software that other people will use and
-                            other engineers will change then you usually have to provide additional information
-                            as well as the code of the program.</p>
-                    </article>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <div><a href="/Software.html" class="hover:text-blue-200">Chapter 2.1</a></div>
+        <div><a href="/process activities.html" class="text-blue-200 font-semibold">Chapter 2.2</a></div>
+        <div><a href="/Coping with change.html" class="hover:text-blue-200">Chapter 2.3</a></div>
+        <div><a href="/UnfiedProcess.html" class="hover:text-blue-200">Chapter 2.4</a></div>
+      </div>
+
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden bg-blue-700 flex flex-col space-y-2 p-4 md:hidden">
+      <div><a href="/Software.html" class="hover:text-blue-200">Chapter 2.1</a></div>
+      <div><a href="/process activities.html" class="text-blue-200 font-semibold">Chapter 2.2</a></div>
+      <div><a href="/Coping with change.html" class="hover:text-blue-200">Chapter 2.3</a></div>
+      <div><a href="/UnfiedProcess.html" class="hover:text-blue-200">Chapter 2.4</a></div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container mx-auto px-6 pt-28 pb-20 leading-relaxed max-w-5xl space-y-14">
+
+    <div class="text-center text-4xl font-bold text-blue-800 mb-10 fade-in">Process Activities</div>
+
+    <!-- INTRO -->
+    <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
+    “Real software processes are interleaved sequences of technical, collaborative, and managerial activities
+    aimed at specifying, designing, implementing, and testing software systems.”
+  </div>
+</div>
 
 
+    <!-- 2.2.1 -->
+    <div class="fade-in">
+      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.1 Software Specification</div>
+      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
+    “Software specification defines system services and constraints. It involves
+    understanding user needs and translating them into clear, testable requirements.”
+  </div>
+</div>
 
 
-                    <p>The waterfall model is consistent with other engineering process models and documentation is produced at each phase. This makes the process visible so managers can
-                        monitor progress against the development plan. Its major problem is the inflexible partitioning of the project into distinct stages. Commitments must be made at an early stage
-                        in the process, which makes it difficult to respond to changing customer requirements.</p>
-                    <p>In principle, the waterfall model should only be used when the requirements are
-                        well understood and unlikely to change radically during system development.
-                        However, the waterfall model reflects the type of process used in other engineering
-                        projects. As is easier to use a common management model for the whole project,
-                        software processes based on the waterfall model are still commonly used.</p>
-                    <p>An important variant of the waterfall model is formal system development, where
-                        a mathematical model of a system specification is created. This model is then
-                        refined, using mathematical transformations that preserve its consistency, into executable code. Based on the assumption that your mathematical transformations are
-                        correct, you can therefore make a strong argument that a program generated in this
-                        way is consistent with its specification.</p>
-                    <p>Formal development processes, such as that based on the B method (Schneider,
-                        2001; Wordsworth, 1996) are particularly suited to the development of systems that
-                        have stringent safety, reliability, or security requirements. The formal approach simplifies the production of a safety or security case. This demonstrates to customers or
-                        regulators that the system actually meets its safety or security requirements.</p>
-                    <p>Processes based on formal transformations are generally only used in the development of safety-critical or security-critical systems. They require specialized
-                        expertise. For the majority of systems this process does not offer significant costbenefits over other approaches to system development.</p>
-                    <h3>6 Chapter 1 ■ Introduction</h3>
+      <div class="flex justify-center my-6">
+        <div class="image-frame max-w-lg">
+          <img src="/src/assets/images/AA 111.png" alt="Specification">
+        </div>
+      </div>
 
-                    <img src="/src/assets/images/2ndpic.PNG" alt="">
+      <div class="pl-6 grid gap-4 sm:grid-cols-2 mt-6">
+  <div class="p-4 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-blue-700 font-semibold mb-1">1. Feasibility Study</div>
+    <div class="text-gray-700 text-sm">
+      Evaluates whether the proposed system can be built within technical and financial limits.
+    </div>
+  </div>
 
-                    <p>Figure 1.1 Frequently
-                        asked questions about
-                        software</p>
+  <div class="p-4 rounded-xl bg-gradient-to-br from-green-100 to-green-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-green-700 font-semibold mb-1">2. Requirements Elicitation & Analysis</div>
+    <div class="text-gray-700 text-sm">
+      Involves gathering, understanding, and analyzing stakeholder needs and system requirements.
+    </div>
+  </div>
 
-                    <p>Software engineers are concerned with developing software products (i.e., software which can be sold to a customer). There are two kinds of software products:</p>
-                    <ol>
-                        <li>Generic products These are stand-alone systems that are produced by a development organization and sold on the open market to any customer who is able to
-                            buy them. Examples of this type of product include software for PCs such as
-                            databases, word processors, drawing packages, and project-management tools.
-                            It also includes so-called vertical applications designed for some specific purpose such as library information systems, accounting systems, or systems for
-                            maintaining dental records.</li>
-                        <li>Customized (or bespoke) products These are systems that are commissioned by
-                            a particular customer. A software contractor develops the software especially
-                            for that customer. Examples of this type of software include control systems for
-                            electronic devices, systems written to support a particular business process, and
-                            air traffic control systems.
-                        </li>
-                    </ol>
+  <div class="p-4 rounded-xl bg-gradient-to-br from-purple-100 to-purple-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-purple-700 font-semibold mb-1">3. Requirements Specification</div>
+    <div class="text-gray-700 text-sm">
+      Converts gathered requirements into an organized, documented specification for developers.
+    </div>
+  </div>
 
-                        <p>An important difference between these types of software is that, in generic products,
-                            the organization that develops the software controls the software specification. For custom products, the specification is usually developed and controlled by the organization
-                            that is buying the software. The software developers must work to that specification.</p>
-                        <p>However, the distinction between these system product types is becoming
-                            increasingly blurred. More and more systems are now being built with a generic
-                            product as a base, which is then adapted to suit the requirements of a customer.
-                            Enterprise Resource Planning (ERP) systems, such as the SAP system, are the best
-                            examples of this approach. Here, a large and complex system is adapted for a company by incorporating information about business rules and processes, reports
-                            required, and so on.</p>
-                        <p>When we talk about the quality of professional software, we have to take into
-                            account that the software is used and changed by people apart from its developers.
-                            Quality is therefore not just concerned with what the software does. Rather, it has to
-                            include the software’s behavior while it is executing and the structure and organization
-                            of the system programs and associated documentation. This is reflected in so-called
-                            quality or non-functional software attributes. Examples of these attributes are the software’s response time to a user query and the understandability of the program code.</p>
-                        <p>The specific set of attributes that you might expect from a software system obviously depends on its application. Therefore, a banking system must be secure, an
-                            interactive game must be responsive, a telephone switching system must be reliable,
-                            and so on. These can be generalized into the set of attributes shown in Figure 1.2,
-                            which I believe are the essential characteristics of a professional software system.</p>
-                        
-                        <h3>2.1.2 Incremental development</h3>
+  <div class="p-4 rounded-xl bg-gradient-to-br from-pink-100 to-pink-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-pink-700 font-semibold mb-1">4. Requirements Validation</div>
+    <div class="text-gray-700 text-sm">
+      Ensures the requirements are realistic, complete, consistent, and meet user expectations.
+    </div>
+  </div>
+</div>
 
-                        <p>Incremental development is based on the idea of developing an initial implementation, exposing this to user comment and evolving it through several versions until an
-                            adequate system has been developed (Figure 2.2). Specification, development, and</p>
-                       <img src="/src/assets/images/2nd_pic.PNG" alt="">
-                       <p>validation activities are interleaved rather than separate, with rapid feedback across activities.</p>
 
-                       <p>Incremental software development, which is a fundamental part of agile
-                        approaches, is better than a waterfall approach for most business, e-commerce, and
-                        personal systems. Incremental development reflects the way that we solve problems. We rarely work out a complete problem solution in advance but move toward
-                        a solution in a series of steps, backtracking when we realize that we have made a
-                        mistake. By developing the software incrementally, it is cheaper and easier to make
-                        changes in the software as it is being developed.</p>
-                        <p>Each increment or version of the system incorporates some of the functionality
-                        that is needed by the customer. Generally, the early increments of the system include
-                        the most important or most urgently required functionality. This means that the
-                        customer can evaluate the system at a relatively early stage in the development to see
-                        if it delivers what is required. If not, then only the current increment has to be
-                        changed and, possibly, new functionality defined for later increments.</p>
-                        <p>Incremental development has three important benefits, compared to the waterfall model:</p>
-                        <ol>
-                            <li> The cost of accommodating changing customer requirements is reduced. The
-                                amount of analysis and documentation that has to be redone is much less than is
-                                required with the waterfall model.</li>
-                            <li> It is easier to get customer feedback on the development work that has been
-                                done. Customers can comment on demonstrations of the software and see how
-                                much has been implemented. Customers find it difficult to judge progress from
-                                software design documents.</li>
-                            <li> More rapid delivery and deployment of useful software to the customer is possible, even if all of the functionality has not been included. Customers are able to
-                                use and gain value from the software earlier than is possible with a waterfall
-                                process</li>
-                            </ol>
+      <div class="flex justify-center my-6">
+        <div class="image-frame max-w-lg">
+          <img src="/src/assets/images/AA 222.png" alt="Requirements Engineering">
+        </div>
+      </div>
+    </div>
 
-                        <p>34 Chapter 2 ■ Software processes</p>
-                        
-                        <article>
-                            <section>
-                                <img src="/src/assets/images/icon1.png" alt="icon">
-                                Problems with incremental development
-                            </section>
-                            <p>Although incremental development has many advantages, it is not problem-free. The primary cause of the
-                                difficulty is the fact that large organizations have bureaucratic procedures that have evolved over time and there
-                                may be a mismatch between these procedures and a more informal iterative or agile process.</p>
-                            <p>Sometimes these procedures are there for good reasons—for example, there may be procedures to ensure
-                                that the software properly implements external regulations (e.g., in the United States, the Sarbanes-Oxley
-                                accounting regulations). Changing these procedures may not be possible so process conflicts may be
-                                unavoidable.</p>
-                            <a href="http://ww25.softwareengineering-9.com/Web/"></a>   
-                        </article>
-                        
-                        <p>Incremental development in some form is now the most common approach for the
-                            development of application systems. This approach can be either plan-driven, agile,
-                            or, more usually, a mixture of these approaches. In a plan-driven approach, the system
-                            increments are identified in advance; if an agile approach is adopted, the early increments are identified but the development of later increments depends on progress and
-                            customer priorities.</p>
-                        <p>From a management perspective, the incremental approach has two problems:</p>
-                       
-                        <ol>
-                            <li>The process is not visible. Managers need regular deliverables to measure
-                                progress. If systems are developed quickly, it is not cost-effective to produce
-                                documents that reflect every version of the system.</li>        
-                            <li>System structure tends to degrade as new increments are added. Unless time and
-                                money is spent on refactoring to improve the software, regular change tends to
-                                corrupt its structure. Incorporating further software changes becomes increasingly difficult and costly.</li>        
-                        </ol>
+    <!-- 2.2.2 -->
+    <div class="fade-in">
+      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.2 Software Design and Implementation</div>
+      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
+    “Design and implementation transform specifications into an executable system.
+    These processes often overlap and interact frequently.”
+  </div>
+</div>
 
-                        <p>The problems of incremental development become particularly acute for large,
-                            complex, long-lifetime systems, where different teams develop different parts of the
-                            system. Large systems need a stable framework or architecture and the responsibilities of the different teams working on parts of the system need to be clearly defined
-                            with respect to that architecture. This has to be planned in advance rather than developed incrementally</p>
-                        <p>You can develop a system incrementally and expose it to customers for comment,
-                            without actually delivering it and deploying it in the customer’s environment.
-                            Incremental delivery and deployment means that the software is used in real, operational processes. This is not always possible as experimenting with new software can
-                            disrupt normal business processes. I discuss the advantages and disadvantages of incremental delivery in Section 2.3.2.</p>
-                            <img src="/src/assets/images/4th_pic.png" alt="">
 
-                        <h3>2.1.3 Reuse-oriented software engineering</h3>
-                        <p>In the majority of software projects, there is some software reuse. This often happens
-                            informally when people working on the project know of designs or code that are
-                            similar to what is required. They look for these, modify them as needed, and incorporate them into their system.</p>
-                        <p>This informal reuse takes place irrespective of the development process that is
-                            used. However, in the 21st century, software development processes that focus on the
-                            reuse of existing software have become widely used. Reuse-oriented approaches rely
-                            on a large base of reusable software components and an integrating framework for
-                            the composition of these components. Sometimes, these components are systems in
-                            their own right (COTS or commercial off-the-shelf systems) that may provide specific functionality such as word processing or a spreadsheet.</p>
-                        <p>A general process model for reuse-based development is shown in Figure 2.3.
-                            Although the initial requirements specification stage and the validation stage are
-                            comparable with other software processes, the intermediate stages in a reuseoriented process are different. These stages are:</p>
+      <div class="flex justify-center my-6">
+        <div class="image-frame max-w-lg">
+          <img src="/src/assets/images/AA 333.png" alt="Design">
+        </div>
+      </div>
 
-                        <ol>
-                            <p>Component analysis Given the requirements specification, a search is made for
-                                components to implement that specification. Usually, there is no exact match and
-                                the components that may be used only provide some of the functionality required.</p>
-                            <p>Requirements modification During this stage, the requirements are analyzed using
-                                information about the components that have been discovered. They are then modified to reflect the available components. Where modifications are impossible, the
-                                component analysis activity may be re-entered to search for alternative solutions.</p>
-                            <p>System design with reuse During this phase, the framework of the system is
-                                designed or an existing framework is reused. The designers take into account the
-                                components that are reused and organize the framework to cater for this. Some
-                                new software may have to be designed if reusable components are not available.</p>
-                            <p>Development and integration Software that cannot be externally procured is
-                                developed, and the components and COTS systems are integrated to create the
-                                new system. System integration, in this model, may be part of the development
-                                process rather than a separate activity</p>
-                        </ol>
+      <div class="pl-6 grid gap-4 sm:grid-cols-2 mt-6">
+  <div class="p-4 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-blue-700 font-semibold mb-1">1. Architectural Design</div>
+    <div class="text-gray-700 text-sm">
+      Defines the overall structure of the system and identifies the major components.
+    </div>
+  </div>
 
-                        <h3>36 Chapter 2 ■ Software processes</h3>
-                        <p>Reuse-oriented software engineering has the obvious advantage of reducing the
-                            amount of software to be developed and so reducing cost and risks. It usually also
-                            leads to faster delivery of the software. However, requirements compromises are
-                            inevitable and this may lead to a system that does not meet the real needs of users.
-                            Furthermore, some control over the system evolution is lost as new versions of the
-                            reusable components are not under the control of the organization using them.</p>
-                        <p>Software reuse is very important and I have dedicated several chapters in the third
-                            part of the book to this topic. General issues of software reuse and COTS reuse are
-                            covered in Chapter 16, component-based software engineering in Chapters 17 and
-                            18, and service-oriented systems in Chapter 19.</p>
+  <div class="p-4 rounded-xl bg-gradient-to-br from-green-100 to-green-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-green-700 font-semibold mb-1">2. Interface Design</div>
+    <div class="text-gray-700 text-sm">
+      Specifies how system components interact and communicate with each other.
+    </div>
+  </div>
 
-                        <h3>2.2 Process activities</h3>
-                        <p>Real software processes are interleaved sequences of technical, collaborative, and
-                            managerial activities with the overall goal of specifying, designing, implementing,
-                            and testing a software system. Software developers use a variety of different software
-                            tools in their work. Tools are particularly useful for supporting the editing of different
-                            types of document and for managing the immense volume of detailed information
-                            that is generated in a large software project.</p>
-                        <p>The four basic process activities of specification, development, validation, and evolution are organized differently in different development processes. In the waterfall
-                            model, they are organized in sequence, whereas in incremental development they are
-                            interleaved. How these activities are carried out depends on the type of software,
-                            people, and organizational structures involved. In extreme programming, for example,
-                            specifications are written on cards. Tests are executable and developed before the
-                            program itself. Evolution may involve substantial system restructuring or refactoring.</p>
-         
-        </section>
-        </main>
+  <div class="p-4 rounded-xl bg-gradient-to-br from-purple-100 to-purple-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-purple-700 font-semibold mb-1">3. Component Design</div>
+    <div class="text-gray-700 text-sm">
+      Defines the internal structure and behavior of individual software components.
+    </div>
+  </div>
 
-        <footer>
+  <div class="p-4 rounded-xl bg-gradient-to-br from-pink-100 to-pink-50 shadow hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+    <div class="text-pink-700 font-semibold mb-1">4. Database Design</div>
+    <div class="text-gray-700 text-sm">
+      Specifies data organization, relationships, and storage strategies.
+    </div>
+  </div>
+</div>
 
-            <section>
-                <h2>SISTIM MEMBERS</h2>
-    
-                <ul>
-                    <li>Mark Angelo G. Patal</li>
-                    <li>Isabella Grace M. Elola</li>
-                    <li>Mat Jannus S. De Guzman</li>
-                    <li>Hazel V. Laguras</li>
-                </ul>
-    
-            </section>
-    
-            
-            <section>
-                © 2025 SISTIM
-            </section>
-    
-    
-        </footer>
+
+      <div class="flex justify-center my-6">
+        <div class="image-frame max-w-lg">
+          <img src="/src/assets/images/AA 444.png" alt="Architecture Example">
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
+    “Agile methods often combine design and implementation, emphasizing working software over detailed design documents.”
+  </div>
+</div>
+
+      <div class="flex justify-center my-6">
+        <div class="image-frame max-w-lg">
+          <img src="/src/assets/images/AA 555.png" alt="Programming">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.2.3 -->
+    <div class="fade-in">
+      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.3 Software Validation</div>
+     <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  
+  <div class="text-gray-800 text-center italic text-lg leading-relaxed mb-6">
+    “Validation ensures that the software meets requirements and expectations. 
+    Testing is the main validation activity.”
+  </div>
+
+  <div class="pl-6 space-y-3 text-gray-700">
+    <div class="flex items-start">
+      <div class="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full mr-3 text-sm font-semibold">1</div>
+      <div>Development testing — tests individual components.</div>
+    </div>
+
+    <div class="flex items-start">
+      <div class="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full mr-3 text-sm font-semibold">2</div>
+      <div>System testing — tests integrated components as a whole.</div>
+    </div>
+
+    <div class="flex items-start">
+      <div class="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full mr-3 text-sm font-semibold">3</div>
+      <div>Acceptance testing — performed by customers before deployment.</div>
+    </div>
+  </div>
+
+</div>
+
+
+      <div class="flex justify-center my-6">
+        <div class="image-frame max-w-lg">
+          <img src="/src/assets/images/AA 666.png" alt="Validation">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.2.4 -->
+    <div class="fade-in">
+      <div class="text-2xl font-semibold text-blue-700 text-center mb-4">2.2.4 Software Evolution</div>
+      <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-l-4 border-blue-600 shadow-md rounded-2xl p-6 my-8 mx-auto max-w-4xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  <div class="text-gray-800 text-center italic text-lg leading-relaxed">
+    “Software evolves as requirements, technologies, and user needs change.
+    Maintenance and evolution are vital to ensuring the software remains relevant.”
+  </div>
+</div>
+
+
+      <div class="flex justify-center my-6">
+        <div class="image-frame max-w-lg">
+          <img src="/src/assets/images/AA 888.png" alt="Evolution">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="bg-blue-800 text-white text-center py-8">
+    <div class="font-semibold text-lg mb-4">SISTIM Members</div>
+    <div>Mark Angelo G. Patal</div>
+    <div>Isabella Grace M. Elola</div>
+    <div>Mat Jannus S. De Guzman</div>
+    <div>Hazel V. Laguras</div>
+    <div class="mt-4 text-sm text-blue-200">© 2025 SISTIM | Software Engineering</div>
+  </div>
+
+  <!-- JS for menu + animation -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
